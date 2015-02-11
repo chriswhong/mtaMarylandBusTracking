@@ -1,0 +1,74 @@
+html,body {
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
+  color:#fff;
+  font-family:sans-serif;
+}
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-popup-content {
+	color:#000;
+}
+
+#infoBox {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	padding: 20px;
+	font-size: 24px;
+}
+
+#blurbBox {
+	position: absolute;
+	bottom: 56px;
+	width: 285px;
+	padding: 0 21px;
+	font-size: 14px;
+}
+
+#FilterBox {
+	position: absolute;
+	top: 116px;    
+	width: 300px;
+	padding: 10px 10px 10px 10px;
+	font-size: 14px;
+
+}
+
+#spinnerBox {
+	width: 125px;
+	height: 125px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -100px 0 0 -150px;
+	text-align: center;
+	box-sizing: border-box;
+	display:none;
+}
+
+.box {
+	box-shadow: 2px 2px 0px #949494;
+	background: #444;
+    opacity: 0.8;
+}
+
+#getData {
+	background: #444;
+	position: absolute;
+	bottom: 0;
+	padding: 5px 5px 1px 5px;
+}
+
+h4 {
+	margin-bottom: 2px;
+}
+
+a,a:visited {
+	color:#CBC2DD;
+}

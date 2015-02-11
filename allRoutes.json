@@ -1,0 +1,3922 @@
+{
+    "version": "1.1",
+    "result": {
+        "retLineWithDirInfos": [
+            {
+                "lineId": 7084,
+                "abbr": "001",
+                "name": "SINAI - FORT McHENRY            ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70840,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80193,
+                                "destinationSign": "1 FT McHENRY"
+                            },
+                            {
+                                "patternId": 80194,
+                                "destinationSign": "1 FT McHENRY"
+                            },
+                            {
+                                "patternId": 80195,
+                                "destinationSign": "1 REIST & LIBERTY HTS."
+                            },
+                            {
+                                "patternId": 80196,
+                                "destinationSign": "1 PACA STREET"
+                            },
+                            {
+                                "patternId": 80197,
+                                "destinationSign": "1 FT McHENRY"
+                            },
+                            {
+                                "patternId": 80198,
+                                "destinationSign": "1 McHENRY VIA NEWTOWN"
+                            },
+                            {
+                                "patternId": 80199,
+                                "destinationSign": "1 CHARLES ST"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70841,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80200,
+                                "destinationSign": "1 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80201,
+                                "destinationSign": "1 SINAI HOSPITAL"
+                            },
+                            {
+                                "patternId": 80202,
+                                "destinationSign": "1 SINAI VIA NEWTOWN"
+                            },
+                            {
+                                "patternId": 80203,
+                                "destinationSign": "1  GREENSPRING & DUPONT"
+                            },
+                            {
+                                "patternId": 80204,
+                                "destinationSign": "1 CAREY STREET"
+                            },
+                            {
+                                "patternId": 80205,
+                                "destinationSign": "1 SINAI HOSPITAL"
+                            },
+                            {
+                                "patternId": 80206,
+                                "destinationSign": "1 CALHOUN & EDMONDSON"
+                            },
+                            {
+                                "patternId": 80207,
+                                "destinationSign": "1 MONDAWMIN STATION"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7085,
+                "abbr": "003",
+                "name": "SHEPPARD PRATT/CROMWELL-DOWNTOWN",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70850,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80208,
+                                "destinationSign": "3 INNER HARBOR"
+                            },
+                            {
+                                "patternId": 80209,
+                                "destinationSign": "3 INNER HARBOR"
+                            },
+                            {
+                                "patternId": 80210,
+                                "destinationSign": "3 INNER HARBOR"
+                            },
+                            {
+                                "patternId": 80211,
+                                "destinationSign": "3 INNER HARBOR"
+                            },
+                            {
+                                "patternId": 80212,
+                                "destinationSign": "3 25TH STREET"
+                            },
+                            {
+                                "patternId": 80213,
+                                "destinationSign": "3 25TH STREET"
+                            },
+                            {
+                                "patternId": 80214,
+                                "destinationSign": "3 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80215,
+                                "destinationSign": "3 33RD STREET"
+                            },
+                            {
+                                "patternId": 80216,
+                                "destinationSign": "3 ST PAUL AND NORTH AVE"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70851,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80217,
+                                "destinationSign": "3 SHEPPARD PRATT"
+                            },
+                            {
+                                "patternId": 80218,
+                                "destinationSign": "3 GOUCHER & TAYLOR"
+                            },
+                            {
+                                "patternId": 80219,
+                                "destinationSign": "3 CROMWELL BRIDGE"
+                            },
+                            {
+                                "patternId": 80220,
+                                "destinationSign": "3 PIONEER LOOP"
+                            },
+                            {
+                                "patternId": 80221,
+                                "destinationSign": "3 PLYMOUTH LOOP"
+                            },
+                            {
+                                "patternId": 80222,
+                                "destinationSign": "3 CROMWELL BRIDGE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7086,
+                "abbr": "004",
+                "name": "TURNERS STATION - C C B C ESSEX",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70860,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80223,
+                                "destinationSign": "4 CCBC ESSEX CAMPUS"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70861,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80225,
+                                "destinationSign": "4 TURNER STATION "
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7087,
+                "abbr": "005",
+                "name": "MONDAWMIN - CEDONIA             ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70870,
+                        "dirName": "EASTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80227,
+                                "destinationSign": "5 CEDONIA LOOP"
+                            },
+                            {
+                                "patternId": 80228,
+                                "destinationSign": "5 CEDONIA VIA HOPKINS"
+                            },
+                            {
+                                "patternId": 80229,
+                                "destinationSign": "5 FEDERAL ST"
+                            },
+                            {
+                                "patternId": 80230,
+                                "destinationSign": "5 PATTERSON PK & LANVALE"
+                            },
+                            {
+                                "patternId": 80231,
+                                "destinationSign": "5 CHARLES ST"
+                            },
+                            {
+                                "patternId": 80232,
+                                "destinationSign": "5 CEDONIA VIA LAKEVIEW"
+                            },
+                            {
+                                "patternId": 80233,
+                                "destinationSign": "5 CEDONIA VIA HOPKINS"
+                            },
+                            {
+                                "patternId": 80234,
+                                "destinationSign": "5   BALTIMORE AND CHARLES"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70871,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80235,
+                                "destinationSign": "5 MONDAWMIN "
+                            },
+                            {
+                                "patternId": 80236,
+                                "destinationSign": "5 MONDAWMIN VIA HOPKINS "
+                            },
+                            {
+                                "patternId": 80237,
+                                "destinationSign": "5 MONDAWMIN "
+                            },
+                            {
+                                "patternId": 80238,
+                                "destinationSign": "5 MONDAWMIN VIA HOPKINS"
+                            },
+                            {
+                                "patternId": 80239,
+                                "destinationSign": "5 MONDAWMIN "
+                            },
+                            {
+                                "patternId": 80240,
+                                "destinationSign": "5 MONDAWMIN "
+                            },
+                            {
+                                "patternId": 80241,
+                                "destinationSign": "5 MOND VIA HOPKINS & LAKEVIEW"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7088,
+                "abbr": "007",
+                "name": "MONDAWMIN - CANTON              ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70880,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80242,
+                                "destinationSign": "7 CANTON"
+                            },
+                            {
+                                "patternId": 80243,
+                                "destinationSign": "7 ALBERMARLE ST"
+                            },
+                            {
+                                "patternId": 80244,
+                                "destinationSign": "7 PATTERSON PARK & EASTERN"
+                            },
+                            {
+                                "patternId": 80245,
+                                "destinationSign": "7 FAIT & LINWOOD"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70881,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80246,
+                                "destinationSign": "7 MONDAWMIN "
+                            },
+                            {
+                                "patternId": 80247,
+                                "destinationSign": "7 MONDAWMIN "
+                            },
+                            {
+                                "patternId": 80248,
+                                "destinationSign": "7 MONDAWMIN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7089,
+                "abbr": "008",
+                "name": "LUTHERVILLE - UMTC",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70890,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80249,
+                                "destinationSign": "8 U OF M TRANSIT CTR"
+                            },
+                            {
+                                "patternId": 80250,
+                                "destinationSign": "8 U OF M TRANSIT CTR"
+                            },
+                            {
+                                "patternId": 80251,
+                                "destinationSign": "8 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80252,
+                                "destinationSign": "8 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80253,
+                                "destinationSign": "8 NORTH AVE."
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70891,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80254,
+                                "destinationSign": "8 LUTHERVILLE"
+                            },
+                            {
+                                "patternId": 80255,
+                                "destinationSign": "8 PIONEER LOOP"
+                            },
+                            {
+                                "patternId": 80256,
+                                "destinationSign": "8 PLYMOUTH LOOP"
+                            },
+                            {
+                                "patternId": 80257,
+                                "destinationSign": "8 LUTHERVILLE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7090,
+                "abbr": "009",
+                "name": "LUTHERVILLE-INTERNATIONAL CIRCLE",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70900,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80258,
+                                "destinationSign": "9 INTERNATIONAL CIRCLE"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70901,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80259,
+                                "destinationSign": "9 LUTHERVILLE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7091,
+                "abbr": "010",
+                "name": "RT. 40/ROLLING - BULLNECK RD.",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70910,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80260,
+                                "destinationSign": "10 BULLNECK ROAD"
+                            },
+                            {
+                                "patternId": 80261,
+                                "destinationSign": "10 BULLNECK ROAD"
+                            },
+                            {
+                                "patternId": 80262,
+                                "destinationSign": "10 LIGHT ST"
+                            },
+                            {
+                                "patternId": 80263,
+                                "destinationSign": "10 KANE LOOP"
+                            },
+                            {
+                                "patternId": 80264,
+                                "destinationSign": "10 DUNDALK & CENTER PL"
+                            },
+                            {
+                                "patternId": 80265,
+                                "destinationSign": "10 DUNDALK & CENTER PL"
+                            },
+                            {
+                                "patternId": 80266,
+                                "destinationSign": "10 CALHOUN LOOP"
+                            },
+                            {
+                                "patternId": 80267,
+                                "destinationSign": "10 TURNER STATION"
+                            },
+                            {
+                                "patternId": 80268,
+                                "destinationSign": "10 TURNER STATION"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70911,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80269,
+                                "destinationSign": "10 RT 40 & ROLLING RD"
+                            },
+                            {
+                                "patternId": 80270,
+                                "destinationSign": "10 NORTH BEND LOOP"
+                            },
+                            {
+                                "patternId": 80271,
+                                "destinationSign": "10 EASTERN & BROADWAY"
+                            },
+                            {
+                                "patternId": 80272,
+                                "destinationSign": "10 PARADISE"
+                            },
+                            {
+                                "patternId": 80273,
+                                "destinationSign": "10 RT 40 & ROLLING RD"
+                            },
+                            {
+                                "patternId": 80274,
+                                "destinationSign": "10 PARADISE"
+                            },
+                            {
+                                "patternId": 80275,
+                                "destinationSign": "10 RT 40 & ROLLING RD"
+                            },
+                            {
+                                "patternId": 80276,
+                                "destinationSign": "10 PARADISE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7092,
+                "abbr": "011",
+                "name": "TOWSONTOWNE - CANTON CROSSING",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70920,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80277,
+                                "destinationSign": "11 CANTON CROSSING "
+                            },
+                            {
+                                "patternId": 80278,
+                                "destinationSign": "11 CANTON CROSSING"
+                            },
+                            {
+                                "patternId": 80279,
+                                "destinationSign": "11 CANTON CROSSING"
+                            },
+                            {
+                                "patternId": 80280,
+                                "destinationSign": "11 BALTIMORE ARENA"
+                            },
+                            {
+                                "patternId": 80281,
+                                "destinationSign": "11 NORTH AVE."
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70921,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80282,
+                                "destinationSign": "11 TOWSON"
+                            },
+                            {
+                                "patternId": 80283,
+                                "destinationSign": "11 BEDFORD SQUARE"
+                            },
+                            {
+                                "patternId": 80284,
+                                "destinationSign": "11 TOWSON"
+                            },
+                            {
+                                "patternId": 80285,
+                                "destinationSign": "11 CHARLES & BELTWAY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7093,
+                "abbr": "012",
+                "name": "STELLA MARIS - NORTH AVE",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70930,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80286,
+                                "destinationSign": "12 STELLA MARIS"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70931,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80287,
+                                "destinationSign": "12 KIRK & CURTAIN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7094,
+                "abbr": "013",
+                "name": "CANTON/FELLS POINT - WALBROOK  ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70940,
+                        "dirName": "WESTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80288,
+                                "destinationSign": "13 WALBROOK JCT"
+                            },
+                            {
+                                "patternId": 80289,
+                                "destinationSign": "13 WALBROOK JCT"
+                            },
+                            {
+                                "patternId": 80290,
+                                "destinationSign": "13 NORTH & WOLFE"
+                            },
+                            {
+                                "patternId": 80291,
+                                "destinationSign": "13 MORELAND AVE"
+                            },
+                            {
+                                "patternId": 80292,
+                                "destinationSign": "13 WALBROOK JCT"
+                            },
+                            {
+                                "patternId": 80293,
+                                "destinationSign": "13 MORELAND AVE"
+                            },
+                            {
+                                "patternId": 80294,
+                                "destinationSign": "13 MORELAND AVE"
+                            },
+                            {
+                                "patternId": 80295,
+                                "destinationSign": "13 NORTH & WOLFE"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70941,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80296,
+                                "destinationSign": "13 FELLS POINT"
+                            },
+                            {
+                                "patternId": 80297,
+                                "destinationSign": "13 CANTON"
+                            },
+                            {
+                                "patternId": 80298,
+                                "destinationSign": "13 KANE LOOP"
+                            },
+                            {
+                                "patternId": 80299,
+                                "destinationSign": "13 PATTERSON PK & FEDERAL"
+                            },
+                            {
+                                "patternId": 80300,
+                                "destinationSign": "13 PATTERSON PK & FEDERAL"
+                            },
+                            {
+                                "patternId": 80301,
+                                "destinationSign": "13 FELLS POINT"
+                            },
+                            {
+                                "patternId": 80302,
+                                "destinationSign": "13 CANTON"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7095,
+                "abbr": "014",
+                "name": "UMTC/PATAPSCO - ANNAPOLIS",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70950,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80303,
+                                "destinationSign": "14 CROMWELL STATION"
+                            },
+                            {
+                                "patternId": 80304,
+                                "destinationSign": "14 JUMPERS  HOLE"
+                            },
+                            {
+                                "patternId": 80305,
+                                "destinationSign": "14 ANNAPOLIS VIA AACC"
+                            },
+                            {
+                                "patternId": 80306,
+                                "destinationSign": "14 ANNAPOLIS"
+                            },
+                            {
+                                "patternId": 80307,
+                                "destinationSign": "14 ANNAPOLIS VIA BAY MEADOW"
+                            },
+                            {
+                                "patternId": 80308,
+                                "destinationSign": "14 JUMPERS HOLE VIA MARLEY"
+                            },
+                            {
+                                "patternId": 80309,
+                                "destinationSign": "14 ANNAPOLIS"
+                            },
+                            {
+                                "patternId": 80310,
+                                "destinationSign": "14 ANNAPOLIS"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70951,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80311,
+                                "destinationSign": "14 PATAPSCO VIA QUARTERFIELD"
+                            },
+                            {
+                                "patternId": 80312,
+                                "destinationSign": "14 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80313,
+                                "destinationSign": "14 PATAPSCO VIA AACC"
+                            },
+                            {
+                                "patternId": 80314,
+                                "destinationSign": "14 UNIV OF MD TRANSIT CTR"
+                            },
+                            {
+                                "patternId": 80315,
+                                "destinationSign": "14 PATAPSCO VIA QUARTERFIELD"
+                            },
+                            {
+                                "patternId": 80316,
+                                "destinationSign": "14 PATAPSCO VIA BAY MEAD & QFLD"
+                            },
+                            {
+                                "patternId": 80317,
+                                "destinationSign": "14 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80318,
+                                "destinationSign": "14 UNIV OF MD TRANSIT CENTER"
+                            },
+                            {
+                                "patternId": 80319,
+                                "destinationSign": "14 UNIV OF MD TRANSIT CENTER VIA PATAPSCO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7096,
+                "abbr": "015",
+                "name": "SECURITY MALL - OVERLEA/PERRY HALL",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70960,
+                        "dirName": "EASTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80320,
+                                "destinationSign": "15 OVERLEA"
+                            },
+                            {
+                                "patternId": 80321,
+                                "destinationSign": "15 GARDENVILLE "
+                            },
+                            {
+                                "patternId": 80322,
+                                "destinationSign": "15 OVERLEA VIA B MASON"
+                            },
+                            {
+                                "patternId": 80323,
+                                "destinationSign": "15 OVERLEA VIA B MASON"
+                            },
+                            {
+                                "patternId": 80324,
+                                "destinationSign": "15 OVERLEA"
+                            },
+                            {
+                                "patternId": 80325,
+                                "destinationSign": "15 OVERLEA"
+                            },
+                            {
+                                "patternId": 80326,
+                                "destinationSign": "15 OVERLEA"
+                            },
+                            {
+                                "patternId": 80327,
+                                "destinationSign": "15 PERRY HALL"
+                            },
+                            {
+                                "patternId": 80328,
+                                "destinationSign": "15 NORTH & GAY"
+                            },
+                            {
+                                "patternId": 80329,
+                                "destinationSign": "15 GUNTHER LOOP"
+                            },
+                            {
+                                "patternId": 80330,
+                                "destinationSign": "15   CARTER & BAYONNE"
+                            },
+                            {
+                                "patternId": 80331,
+                                "destinationSign": "15 OVERLEA"
+                            },
+                            {
+                                "patternId": 80332,
+                                "destinationSign": "15 POPLAR GROVE"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70961,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80333,
+                                "destinationSign": "15 WALBROOK JCT"
+                            },
+                            {
+                                "patternId": 80334,
+                                "destinationSign": "15 WALBROOK JCT"
+                            },
+                            {
+                                "patternId": 80335,
+                                "destinationSign": "15 SEC SQ VIA B MASON"
+                            },
+                            {
+                                "patternId": 80336,
+                                "destinationSign": "15 WESTVIEW VIA B MASON"
+                            },
+                            {
+                                "patternId": 80337,
+                                "destinationSign": "15 RUTHERFORD IND PARK"
+                            },
+                            {
+                                "patternId": 80338,
+                                "destinationSign": "15 SEC BLVD & CMS"
+                            },
+                            {
+                                "patternId": 80339,
+                                "destinationSign": "15 NORTH & GAY"
+                            },
+                            {
+                                "patternId": 80340,
+                                "destinationSign": "15 WALBROOK JCT"
+                            },
+                            {
+                                "patternId": 80341,
+                                "destinationSign": "15 NORTH & GAY"
+                            },
+                            {
+                                "patternId": 80342,
+                                "destinationSign": "15  NORTH AVE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7097,
+                "abbr": "016",
+                "name": "MONDAWMIN - BROOKLYN HOMES",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70970,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80343,
+                                "destinationSign": "16 BROOKLYN HOMES"
+                            },
+                            {
+                                "patternId": 80344,
+                                "destinationSign": "16 BROOKLYN HOMES"
+                            },
+                            {
+                                "patternId": 80345,
+                                "destinationSign": "16 BROOKLYN HOMES VIA VIOLETVILLE"
+                            },
+                            {
+                                "patternId": 80346,
+                                "destinationSign": "16 BROOKLYN HOMES VIA VIOLETVILLE"
+                            },
+                            {
+                                "patternId": 80347,
+                                "destinationSign": "16 BROOKLYN HOMES"
+                            },
+                            {
+                                "patternId": 80348,
+                                "destinationSign": "16 BROOKLYN HOMES"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70971,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80349,
+                                "destinationSign": "16 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80350,
+                                "destinationSign": "16 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80351,
+                                "destinationSign": "16 MONDAWMIN VIA VIOLETVILLE"
+                            },
+                            {
+                                "patternId": 80352,
+                                "destinationSign": "16 MONDAWMIN VIA VIOLETVILLE"
+                            },
+                            {
+                                "patternId": 80353,
+                                "destinationSign": "16 WASHINGTON BLVD"
+                            },
+                            {
+                                "patternId": 80354,
+                                "destinationSign": "16 MONDAWMIN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7098,
+                "abbr": "017",
+                "name": "PATAPSCO STATION-PARKWAY CENTER ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 70980,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80355,
+                                "destinationSign": "17 ARUNDEL MILLS"
+                            },
+                            {
+                                "patternId": 80356,
+                                "destinationSign": "17 PARKWAY CENTER"
+                            },
+                            {
+                                "patternId": 80357,
+                                "destinationSign": "17 PARKWAY CENTER"
+                            },
+                            {
+                                "patternId": 80358,
+                                "destinationSign": "17 ARUNDEL MILLS"
+                            },
+                            {
+                                "patternId": 80359,
+                                "destinationSign": "17 ARUNDEL MILLS"
+                            },
+                            {
+                                "patternId": 80360,
+                                "destinationSign": "17 BWI MARSHALL AIRPORT"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70981,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80361,
+                                "destinationSign": "17 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80362,
+                                "destinationSign": "17 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80363,
+                                "destinationSign": "17 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80364,
+                                "destinationSign": "17 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80365,
+                                "destinationSign": "17 U OF M TRANSIT CTR"
+                            },
+                            {
+                                "patternId": 80366,
+                                "destinationSign": "17 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80367,
+                                "destinationSign": "17 PATAPSCO STATION"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7099,
+                "abbr": "018",
+                "name": "GLEN - BAAS & TALMUDICAL",
+                "color": "#800080",
+                "drInfos": [
+                    {
+                        "lineDirId": 70990,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80368,
+                                "destinationSign": "18 VELVET VALLEY"
+                            },
+                            {
+                                "patternId": 80369,
+                                "destinationSign": "18 COPPER RIDGE"
+                            },
+                            {
+                                "patternId": 80370,
+                                "destinationSign": "18 SCOTTS HILL"
+                            },
+                            {
+                                "patternId": 80371,
+                                "destinationSign": "18  OWINGS MILLS CENTER"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 70991,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80372,
+                                "destinationSign": "18 GLEN & KEY"
+                            },
+                            {
+                                "patternId": 80373,
+                                "destinationSign": "18 GLEN & KEY"
+                            },
+                            {
+                                "patternId": 80374,
+                                "destinationSign": "18 GLEN & KEY"
+                            },
+                            {
+                                "patternId": 80375,
+                                "destinationSign": "18  GLEN & KEY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7100,
+                "abbr": "019",
+                "name": "STATE CENTER - GOUCHER/CARNEY   ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71000,
+                        "dirName": "NORTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80376,
+                                "destinationSign": "19 NORTH AVENUE"
+                            },
+                            {
+                                "patternId": 80377,
+                                "destinationSign": "19 CARNEY"
+                            },
+                            {
+                                "patternId": 80378,
+                                "destinationSign": "19 CARNEY"
+                            },
+                            {
+                                "patternId": 80379,
+                                "destinationSign": "19 GOUCHER & TAYLOR"
+                            },
+                            {
+                                "patternId": 80380,
+                                "destinationSign": "19 GOUCHER & TAYLOR"
+                            },
+                            {
+                                "patternId": 80381,
+                                "destinationSign": "19   CARTER & BAYONNE"
+                            },
+                            {
+                                "patternId": 80382,
+                                "destinationSign": "19 ST LO LOOP"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71001,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80383,
+                                "destinationSign": "19 STATE CENTER"
+                            },
+                            {
+                                "patternId": 80384,
+                                "destinationSign": "19 HARFORD & 20TH"
+                            },
+                            {
+                                "patternId": 80385,
+                                "destinationSign": "19 STATE CENTER "
+                            },
+                            {
+                                "patternId": 80386,
+                                "destinationSign": "19 STATE CENTER "
+                            },
+                            {
+                                "patternId": 80387,
+                                "destinationSign": "19 STATE CENTER"
+                            },
+                            {
+                                "patternId": 80388,
+                                "destinationSign": "19 STATE CENTER"
+                            },
+                            {
+                                "patternId": 80389,
+                                "destinationSign": "19 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80390,
+                                "destinationSign": "19   NORTH AVENUE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7101,
+                "abbr": "020",
+                "name": "SECURITY SQUARE MALL  -  DUNDALK",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71010,
+                        "dirName": "EASTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80391,
+                                "destinationSign": "20 C.C.B.C. DUNDALK"
+                            },
+                            {
+                                "patternId": 80392,
+                                "destinationSign": "20 C.C.B.C. DUNDALK"
+                            },
+                            {
+                                "patternId": 80393,
+                                "destinationSign": "20 DUNDALK MARINE TERM"
+                            },
+                            {
+                                "patternId": 80394,
+                                "destinationSign": "20 BALTIMORE ARENA"
+                            },
+                            {
+                                "patternId": 80395,
+                                "destinationSign": "20 C.C.B.C. DUNDALK"
+                            },
+                            {
+                                "patternId": 80396,
+                                "destinationSign": "20  DUNDALK LOOP"
+                            },
+                            {
+                                "patternId": 80397,
+                                "destinationSign": "20 DUNDALK LOOP"
+                            },
+                            {
+                                "patternId": 80398,
+                                "destinationSign": "20 C.C.B.C. DUNDALK"
+                            },
+                            {
+                                "patternId": 80399,
+                                "destinationSign": "20 C.C.B.C. VIA ATHOL"
+                            },
+                            {
+                                "patternId": 80400,
+                                "destinationSign": "20 DUNDALK MARINE TERM"
+                            },
+                            {
+                                "patternId": 80401,
+                                "destinationSign": "20 DUNDALK MARINE TERM"
+                            },
+                            {
+                                "patternId": 80402,
+                                "destinationSign": "20 PONCA STREET"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71011,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80403,
+                                "destinationSign": "20 EDMONDSON VILLAGE"
+                            },
+                            {
+                                "patternId": 80404,
+                                "destinationSign": "20 EASTERN & PONCA"
+                            },
+                            {
+                                "patternId": 80405,
+                                "destinationSign": "20 SECURITY SQ MALL"
+                            },
+                            {
+                                "patternId": 80406,
+                                "destinationSign": "20 SECURITY SQ MALL"
+                            },
+                            {
+                                "patternId": 80407,
+                                "destinationSign": "20 EDMONDSON VILLAGE"
+                            },
+                            {
+                                "patternId": 80408,
+                                "destinationSign": "20 SECURITY BLVD & CMS"
+                            },
+                            {
+                                "patternId": 80409,
+                                "destinationSign": "20 SECURITY BLVD & CMS"
+                            },
+                            {
+                                "patternId": 80410,
+                                "destinationSign": "20 SECURITY SQ MALL"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7102,
+                "abbr": "021",
+                "name": "FELLS POINT - MONDAWMIN",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71020,
+                        "dirName": "EASTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80411,
+                                "destinationSign": "21 FELLS POINT"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71021,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80412,
+                                "destinationSign": "21 MONDAWMIN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7103,
+                "abbr": "022",
+                "name": "BAYVIEW - MONDAWMIN       ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71030,
+                        "dirName": "WESTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80413,
+                                "destinationSign": "22 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80414,
+                                "destinationSign": "22 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80415,
+                                "destinationSign": "22 COLDSPRING LOOP"
+                            },
+                            {
+                                "patternId": 80416,
+                                "destinationSign": "22 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80417,
+                                "destinationSign": "22 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80418,
+                                "destinationSign": "22 BELAIR & ERDMAN"
+                            },
+                            {
+                                "patternId": 80419,
+                                "destinationSign": "22 BELAIR & ERDMAN"
+                            },
+                            {
+                                "patternId": 80420,
+                                "destinationSign": "22  MONDAWMIN STATION"
+                            },
+                            {
+                                "patternId": 80421,
+                                "destinationSign": "22  MONDAWMIN STATION"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71031,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80422,
+                                "destinationSign": "22 HIGHLANDTOWN"
+                            },
+                            {
+                                "patternId": 80423,
+                                "destinationSign": "22 BAYVIEW MED CTR"
+                            },
+                            {
+                                "patternId": 80424,
+                                "destinationSign": "22 KANE LOOP"
+                            },
+                            {
+                                "patternId": 80425,
+                                "destinationSign": "22 HIGHLANDTOWN"
+                            },
+                            {
+                                "patternId": 80426,
+                                "destinationSign": "22 HIGHLANDTOWN"
+                            },
+                            {
+                                "patternId": 80427,
+                                "destinationSign": "22 HIGHLANDTOWN"
+                            },
+                            {
+                                "patternId": 80428,
+                                "destinationSign": "22 HIGHLANDTOWN"
+                            },
+                            {
+                                "patternId": 80429,
+                                "destinationSign": "22 BAYVIEW MED CTR"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7104,
+                "abbr": "023",
+                "name": "RT40 & ROLLING - FOX RIDGE",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71040,
+                        "dirName": "EASTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80430,
+                                "destinationSign": "23 FOX RIDGE"
+                            },
+                            {
+                                "patternId": 80431,
+                                "destinationSign": "23 BAYVIEW MED CTR"
+                            },
+                            {
+                                "patternId": 80432,
+                                "destinationSign": "23 FOX RIDGE"
+                            },
+                            {
+                                "patternId": 80433,
+                                "destinationSign": "23 KANE LOOP "
+                            },
+                            {
+                                "patternId": 80434,
+                                "destinationSign": "23 KANE LOOP"
+                            },
+                            {
+                                "patternId": 80435,
+                                "destinationSign": "23 DOWNTOWN "
+                            },
+                            {
+                                "patternId": 80436,
+                                "destinationSign": "23 FOX RIDGE VIA WILDWOOD"
+                            },
+                            {
+                                "patternId": 80437,
+                                "destinationSign": "23 FOX RIDGE"
+                            },
+                            {
+                                "patternId": 80438,
+                                "destinationSign": "23 DOWNTOWN "
+                            },
+                            {
+                                "patternId": 80439,
+                                "destinationSign": "23 CALHOUN LOOP "
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71041,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80440,
+                                "destinationSign": "23 RT40 & ROLLING RD"
+                            },
+                            {
+                                "patternId": 80441,
+                                "destinationSign": "23 RT40 & ROLLING RD"
+                            },
+                            {
+                                "patternId": 80442,
+                                "destinationSign": "23 BROADWAY "
+                            },
+                            {
+                                "patternId": 80443,
+                                "destinationSign": "23 DOWNTOWN "
+                            },
+                            {
+                                "patternId": 80444,
+                                "destinationSign": "23 RT40 VIA WILDWOOD"
+                            },
+                            {
+                                "patternId": 80445,
+                                "destinationSign": "23 WILDWOOD"
+                            },
+                            {
+                                "patternId": 80446,
+                                "destinationSign": "23 NORTHBEND & FREDERICK"
+                            },
+                            {
+                                "patternId": 80447,
+                                "destinationSign": "23 EDMONDSON VILLAGE "
+                            },
+                            {
+                                "patternId": 80448,
+                                "destinationSign": "23 BAYVIEW MED CTR"
+                            },
+                            {
+                                "patternId": 80449,
+                                "destinationSign": "23 EDMONDSON VILLAGE"
+                            },
+                            {
+                                "patternId": 82663,
+                                "destinationSign": "23 ROLLING ROAD & RT 40"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7105,
+                "abbr": "024",
+                "name": "WHISPERING WOODS - MORAVIA",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71050,
+                        "dirName": "WESTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80450,
+                                "destinationSign": "24 MORAVIA"
+                            },
+                            {
+                                "patternId": 80451,
+                                "destinationSign": "24 ESSEX LOOP"
+                            },
+                            {
+                                "patternId": 80452,
+                                "destinationSign": "24 MORAVIA "
+                            },
+                            {
+                                "patternId": 80453,
+                                "destinationSign": "24 MORAVIA"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71051,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80454,
+                                "destinationSign": "24 WHISPERING WOODS"
+                            },
+                            {
+                                "patternId": 80455,
+                                "destinationSign": "24 WHISPERING WOODS"
+                            },
+                            {
+                                "patternId": 80456,
+                                "destinationSign": "24 KANE LOOP"
+                            },
+                            {
+                                "patternId": 80457,
+                                "destinationSign": "24 ESSEX LOOP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7106,
+                "abbr": "027",
+                "name": "PLAZA STATION - PORT COVINGTON",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71060,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80458,
+                                "destinationSign": "27 PORT COVINGTON"
+                            },
+                            {
+                                "patternId": 80459,
+                                "destinationSign": "27 NORTH AVENUE"
+                            },
+                            {
+                                "patternId": 80460,
+                                "destinationSign": "27 ROLAND & DEEPDENE"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71061,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80461,
+                                "destinationSign": "27 REIST PLAZA STA"
+                            },
+                            {
+                                "patternId": 80462,
+                                "destinationSign": "27 ROGERS AVE STATION"
+                            },
+                            {
+                                "patternId": 80463,
+                                "destinationSign": "27 REIST PLAZA STA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7107,
+                "abbr": "029",
+                "name": "CHERRY HILL STATION SHUTTLE",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71070,
+                        "dirName": "CIRCULAR",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80464,
+                                "destinationSign": "29 CHERRY HILL VIA MP BLDG"
+                            },
+                            {
+                                "patternId": 80465,
+                                "destinationSign": "29 CHERRY HILL STATION"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7108,
+                "abbr": "030",
+                "name": "BAYVIEW - EDMONDSON VILLAGE",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71080,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80466,
+                                "destinationSign": "30 EDMONDSON VILLAGE"
+                            },
+                            {
+                                "patternId": 80467,
+                                "destinationSign": "30 U of M TRANSIT CTR"
+                            },
+                            {
+                                "patternId": 80468,
+                                "destinationSign": "30 EDMONDSON VILLAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71081,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80469,
+                                "destinationSign": "30 BAYVIEW MED CTR"
+                            },
+                            {
+                                "patternId": 80470,
+                                "destinationSign": "30 CITY HALL"
+                            },
+                            {
+                                "patternId": 80471,
+                                "destinationSign": "30 MONROE ST"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7109,
+                "abbr": "033",
+                "name": "ROGERS STATION - MORAVIA",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71090,
+                        "dirName": "EASTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80472,
+                                "destinationSign": "33 MORAVIA"
+                            },
+                            {
+                                "patternId": 80473,
+                                "destinationSign": "33 COLD SPRING LOOP "
+                            },
+                            {
+                                "patternId": 80474,
+                                "destinationSign": "33 MORAVIA"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71091,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80475,
+                                "destinationSign": "33 ROGERS AVE STATION"
+                            },
+                            {
+                                "patternId": 80476,
+                                "destinationSign": "33 COLD SPRING LOOP"
+                            },
+                            {
+                                "patternId": 80477,
+                                "destinationSign": "33 ROGERS AVE STATION"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7110,
+                "abbr": "035",
+                "name": "WHITEMARSH P&R - UMBC / BLIND IND.",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71100,
+                        "dirName": "WESTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80478,
+                                "destinationSign": "35 U.M.B.C."
+                            },
+                            {
+                                "patternId": 80479,
+                                "destinationSign": "35 BLIND INDUSTRIES"
+                            },
+                            {
+                                "patternId": 80480,
+                                "destinationSign": "35 BLIND INDUSTRIES"
+                            },
+                            {
+                                "patternId": 80481,
+                                "destinationSign": "35 FULTON AVE."
+                            },
+                            {
+                                "patternId": 80482,
+                                "destinationSign": "35 UMBC"
+                            },
+                            {
+                                "patternId": 80483,
+                                "destinationSign": "35 U.M.B.C. VIA WHITE MARSH PNR"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71101,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80484,
+                                "destinationSign": "35 WHITE MARSH MALL"
+                            },
+                            {
+                                "patternId": 80485,
+                                "destinationSign": "35 WHITE MARSH VIA DeSOTO"
+                            },
+                            {
+                                "patternId": 80486,
+                                "destinationSign": "35 WHITE MARSH MALL"
+                            },
+                            {
+                                "patternId": 80487,
+                                "destinationSign": "35 WHITE MARSH PNR"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7111,
+                "abbr": "036",
+                "name": "NORTHERN PKWY & YORK - RIVERVIEW",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71110,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80488,
+                                "destinationSign": "36 RIVERVIEW"
+                            },
+                            {
+                                "patternId": 80489,
+                                "destinationSign": "36 MONROE STREET"
+                            },
+                            {
+                                "patternId": 80490,
+                                "destinationSign": "36 RIVERVIEW"
+                            },
+                            {
+                                "patternId": 80491,
+                                "destinationSign": "36 MONROE STREET"
+                            },
+                            {
+                                "patternId": 80492,
+                                "destinationSign": "36 KIRK DIVISION"
+                            },
+                            {
+                                "patternId": 80493,
+                                "destinationSign": "36 GREENMOUNT AVE"
+                            },
+                            {
+                                "patternId": 80494,
+                                "destinationSign": "36 GREENMOUNT AVE"
+                            },
+                            {
+                                "patternId": 80495,
+                                "destinationSign": "36 MONROE STREET"
+                            },
+                            {
+                                "patternId": 80496,
+                                "destinationSign": "36 GREENMOUNT AVE"
+                            },
+                            {
+                                "patternId": 82662,
+                                "destinationSign": "36  RIVERVIEW"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71111,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80497,
+                                "destinationSign": "36 NORTHERN & YORK"
+                            },
+                            {
+                                "patternId": 80498,
+                                "destinationSign": "36 NORTHERN & YORK"
+                            },
+                            {
+                                "patternId": 80499,
+                                "destinationSign": "36 KIRK DIVISION"
+                            },
+                            {
+                                "patternId": 80500,
+                                "destinationSign": "36 NORTHERN & YORK"
+                            },
+                            {
+                                "patternId": 80501,
+                                "destinationSign": "36 PLYMOUTH LOOP"
+                            },
+                            {
+                                "patternId": 80502,
+                                "destinationSign": "36 PIONEER LOOP"
+                            },
+                            {
+                                "patternId": 80503,
+                                "destinationSign": "36 NORTHERN & YORK"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7112,
+                "abbr": "038",
+                "name": "NORTH BEND-COLD SPRING & GRANDVIEW",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71120,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80504,
+                                "destinationSign": "38 COLDSPRING & GRANDVIEW"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71121,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80505,
+                                "destinationSign": "38 NORTH BEND LOOP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7113,
+                "abbr": "03X",
+                "name": "CROMWELL BRIDGE - INNER HARBOR EXP",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71130,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80506,
+                                "destinationSign": "3X INNER HARBOR"
+                            },
+                            {
+                                "patternId": 80507,
+                                "destinationSign": "3X INNER HARBOR"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71131,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80508,
+                                "destinationSign": "3X CROMWELL BRIDGE EXP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7114,
+                "abbr": "040",
+                "name": "SECURITY SQ. / MIDDLE RIVER.",
+                "color": "#ffff00",
+                "drInfos": [
+                    {
+                        "lineDirId": 71140,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80509,
+                                "destinationSign": "qb40 MIDDLE RIVER"
+                            },
+                            {
+                                "patternId": 80510,
+                                "destinationSign": "qb40 CHARLES ST"
+                            },
+                            {
+                                "patternId": 80511,
+                                "destinationSign": "qb40 KANE LOOP"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71141,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80512,
+                                "destinationSign": "qb40 SEC BLVD AT CMS"
+                            },
+                            {
+                                "patternId": 80513,
+                                "destinationSign": "qb40 FAYETTE & CHARLES"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7115,
+                "abbr": "044",
+                "name": "ROSEDALE IND PK - SECURITY SQ. MALL",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71150,
+                        "dirName": "WESTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80514,
+                                "destinationSign": "44 SECURITY SQ MALL"
+                            },
+                            {
+                                "patternId": 80515,
+                                "destinationSign": "44 SOCIAL SECURITY"
+                            },
+                            {
+                                "patternId": 80516,
+                                "destinationSign": "44 SOCIAL SECURITY"
+                            },
+                            {
+                                "patternId": 80517,
+                                "destinationSign": "44 SECURITY SQ MALL"
+                            },
+                            {
+                                "patternId": 80518,
+                                "destinationSign": "44 GRANDVIEW LOOP"
+                            },
+                            {
+                                "patternId": 80519,
+                                "destinationSign": "44 GWYNN OAK LOOP"
+                            },
+                            {
+                                "patternId": 80520,
+                                "destinationSign": "44 GWYNN OAK LOOP"
+                            },
+                            {
+                                "patternId": 80521,
+                                "destinationSign": "44 LIBERTY HEIGHTS AVE"
+                            },
+                            {
+                                "patternId": 80522,
+                                "destinationSign": "44 GRANDVIEW LOOP"
+                            },
+                            {
+                                "patternId": 80523,
+                                "destinationSign": "44 ROGERS AVE STATION"
+                            },
+                            {
+                                "patternId": 80524,
+                                "destinationSign": "44 SECURITY SQUARE MALL"
+                            },
+                            {
+                                "patternId": 80525,
+                                "destinationSign": "44 SECURITY BLVD AT CMS"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71151,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80526,
+                                "destinationSign": "44 ROSEDALE IND PARK"
+                            },
+                            {
+                                "patternId": 80527,
+                                "destinationSign": "44 ROSEDALE IND PARK"
+                            },
+                            {
+                                "patternId": 80528,
+                                "destinationSign": "44 ROSEDALE IND PARK"
+                            },
+                            {
+                                "patternId": 80529,
+                                "destinationSign": "44 CEDELLA  AVE LOOP"
+                            },
+                            {
+                                "patternId": 80530,
+                                "destinationSign": "44 ROSEDALE IND PARK"
+                            },
+                            {
+                                "patternId": 80531,
+                                "destinationSign": "44 CEDELLA AVE LOOP"
+                            },
+                            {
+                                "patternId": 80532,
+                                "destinationSign": "44 FALLSTAFF LOOP"
+                            },
+                            {
+                                "patternId": 80533,
+                                "destinationSign": "44 ROSEDALE IND PARK"
+                            },
+                            {
+                                "patternId": 80534,
+                                "destinationSign": "44 ROSEDALE IND PARK"
+                            },
+                            {
+                                "patternId": 80535,
+                                "destinationSign": "44 ROSEDALE IND PARK"
+                            },
+                            {
+                                "patternId": 80536,
+                                "destinationSign": "44 ROSEDALE IND PARK"
+                            },
+                            {
+                                "patternId": 80537,
+                                "destinationSign": "44 ROGERS STATION"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7116,
+                "abbr": "046",
+                "name": "CEDONIA-PARADISE QUICKBUS",
+                "color": "#ffff00",
+                "drInfos": [
+                    {
+                        "lineDirId": 71160,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80538,
+                                "destinationSign": "qb 46 CEDONIA"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71161,
+                        "dirName": "WESTBOND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80539,
+                                "destinationSign": "qb46 PARADISE AVE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7117,
+                "abbr": "047",
+                "name": "WALBROOK-OVERLEA QUICKBUS",
+                "color": "#ffff00",
+                "drInfos": [
+                    {
+                        "lineDirId": 71170,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80540,
+                                "destinationSign": "qb47 OVERLEA"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71171,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80541,
+                                "destinationSign": "qb47 WALBROOK JCT"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7118,
+                "abbr": "048",
+                "name": "TOWSON - TRANSIT CTR",
+                "color": "#ffff00",
+                "drInfos": [
+                    {
+                        "lineDirId": 71180,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80542,
+                                "destinationSign": "qb48 U OF M TRANSIT CTR"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71181,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80543,
+                                "destinationSign": "qb48 TOWSON"
+                            },
+                            {
+                                "patternId": 80544,
+                                "destinationSign": "qb48 TOWSON"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7119,
+                "abbr": "050",
+                "name": "BELAIR EDISON SHUTTLE",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71190,
+                        "dirName": "CIRCULAR  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80545,
+                                "destinationSign": "50 ERDMAN AVE"
+                            },
+                            {
+                                "patternId": 80546,
+                                "destinationSign": "50 ERDMAN VIA MORAVIA PK"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7120,
+                "abbr": "051",
+                "name": "ROGERS STATION-PATAPSCO STATION   ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71200,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80547,
+                                "destinationSign": "51 MONROE & WASHINGTON"
+                            },
+                            {
+                                "patternId": 80548,
+                                "destinationSign": "51 MONROE & WASHINGTON"
+                            },
+                            {
+                                "patternId": 80549,
+                                "destinationSign": "51 PATAPSCO VIA CHERRY HILL"
+                            },
+                            {
+                                "patternId": 80550,
+                                "destinationSign": "51 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80551,
+                                "destinationSign": "51 MONROE LOOP"
+                            },
+                            {
+                                "patternId": 80552,
+                                "destinationSign": "51 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80553,
+                                "destinationSign": "51 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80554,
+                                "destinationSign": "51 MONROE LOOP"
+                            },
+                            {
+                                "patternId": 80555,
+                                "destinationSign": "51 PRESSTMAN"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71201,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80556,
+                                "destinationSign": "51 ROGERS STATION"
+                            },
+                            {
+                                "patternId": 80557,
+                                "destinationSign": "51 ROGERS STATION"
+                            },
+                            {
+                                "patternId": 80558,
+                                "destinationSign": "51 ROGERS VIA CHERRY HILL"
+                            },
+                            {
+                                "patternId": 80559,
+                                "destinationSign": "51 LIBERTY HEIGHTS"
+                            },
+                            {
+                                "patternId": 80560,
+                                "destinationSign": "51 MONROE & WASHINGTON"
+                            },
+                            {
+                                "patternId": 80561,
+                                "destinationSign": "51 LIBERTY HEIGHTS"
+                            },
+                            {
+                                "patternId": 80562,
+                                "destinationSign": "51 ROGERS STATION"
+                            },
+                            {
+                                "patternId": 80563,
+                                "destinationSign": "51 MONROE LOOP"
+                            },
+                            {
+                                "patternId": 80564,
+                                "destinationSign": "51 MONDAWMIN (LIBERTY & REISTERSTOWN)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7121,
+                "abbr": "052",
+                "name": "MILFORD MILL RD-MONDAWMIN STAT",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71210,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80565,
+                                "destinationSign": "52 MONDAWMIN "
+                            },
+                            {
+                                "patternId": 80566,
+                                "destinationSign": "52 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80567,
+                                "destinationSign": "52 MONDAWMIN"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71211,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80568,
+                                "destinationSign": "52 MILFORD MILL LOOP"
+                            },
+                            {
+                                "patternId": 80569,
+                                "destinationSign": "52 MILFORD MILL LOOP"
+                            },
+                            {
+                                "patternId": 80570,
+                                "destinationSign": "52 MILFORD MILL LOOP"
+                            },
+                            {
+                                "patternId": 80571,
+                                "destinationSign": "52 NORTHERN PKWY & LIBERTY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7122,
+                "abbr": "053",
+                "name": "OLD COURT METRO-MONDAWMIN METRO ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71220,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80572,
+                                "destinationSign": "53 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80573,
+                                "destinationSign": "53 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80574,
+                                "destinationSign": "53 NORTHERN PKWY"
+                            },
+                            {
+                                "patternId": 80575,
+                                "destinationSign": "53 MONDAWMIN"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71221,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80576,
+                                "destinationSign": "53 OLD COURT METRO"
+                            },
+                            {
+                                "patternId": 80577,
+                                "destinationSign": "53 OLD COURT METRO"
+                            },
+                            {
+                                "patternId": 80578,
+                                "destinationSign": "53 PIKESVILLE"
+                            },
+                            {
+                                "patternId": 80579,
+                                "destinationSign": "53 FALLSTAFF ROAD"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7123,
+                "abbr": "054",
+                "name": "RANDALLSTOWN - NORTH & PENN",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71230,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80580,
+                                "destinationSign": "54  NORTH AND PENNSYLVANIA"
+                            },
+                            {
+                                "patternId": 80581,
+                                "destinationSign": "54 NORTH AND PENNSYLVANIA"
+                            },
+                            {
+                                "patternId": 80582,
+                                "destinationSign": "54 LIBERTY HEIGHTS"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71231,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80583,
+                                "destinationSign": "54 RANDALLSTOWN"
+                            },
+                            {
+                                "patternId": 80584,
+                                "destinationSign": "54 MILFORD MILL STA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7124,
+                "abbr": "055",
+                "name": "FOX RIDGE - TOWSON",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71240,
+                        "dirName": "WESTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80585,
+                                "destinationSign": "55 TOWSON "
+                            },
+                            {
+                                "patternId": 80586,
+                                "destinationSign": "55 TOWSON"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71241,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80587,
+                                "destinationSign": "55 FOX RIDGE"
+                            },
+                            {
+                                "patternId": 80588,
+                                "destinationSign": "55 FOX RIDGE"
+                            },
+                            {
+                                "patternId": 80589,
+                                "destinationSign": "55 OVERLEA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7125,
+                "abbr": "056",
+                "name": "GLYNDON - OWINGS MILLS MALL",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71250,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80590,
+                                "destinationSign": "56 OWINGS MILLS MALL"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71251,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80591,
+                                "destinationSign": "56 GLYNDON"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7126,
+                "abbr": "057",
+                "name": "SECURITY SQ. MALL/SSA - ROGERS STA.",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71260,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80592,
+                                "destinationSign": "57 ROGERS STATION"
+                            },
+                            {
+                                "patternId": 80593,
+                                "destinationSign": "57 ROGERS STATION"
+                            },
+                            {
+                                "patternId": 80594,
+                                "destinationSign": "57 ROGERS STATION"
+                            },
+                            {
+                                "patternId": 80595,
+                                "destinationSign": "57 ROGERS STATION"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71261,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80596,
+                                "destinationSign": "57 SOCIAL SECURITY"
+                            },
+                            {
+                                "patternId": 80597,
+                                "destinationSign": "57 SOCIAL SECURITY"
+                            },
+                            {
+                                "patternId": 80598,
+                                "destinationSign": "57 SECURITY SQ MALL"
+                            },
+                            {
+                                "patternId": 80599,
+                                "destinationSign": "57 GWYNN OAK PARK"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7127,
+                "abbr": "058",
+                "name": "RP STATION - WHITE MARSH",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71270,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80600,
+                                "destinationSign": "58 MT WASHINGTON"
+                            },
+                            {
+                                "patternId": 80601,
+                                "destinationSign": "58 WHITE MARSH"
+                            },
+                            {
+                                "patternId": 80602,
+                                "destinationSign": "58 OVERLEA"
+                            },
+                            {
+                                "patternId": 80603,
+                                "destinationSign": "58 WHITE MARSH PNR"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71271,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80604,
+                                "destinationSign": "58 REIST PLAZA STATION"
+                            },
+                            {
+                                "patternId": 80605,
+                                "destinationSign": "58 REISTERSTOWN PLAZA STA."
+                            },
+                            {
+                                "patternId": 80606,
+                                "destinationSign": "58 REISTERSTOWN PLAZA"
+                            },
+                            {
+                                "patternId": 80607,
+                                "destinationSign": "58 REISTERSTOWN PLAZA STATION VIA WHITE MARSH PNR"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7128,
+                "abbr": "059",
+                "name": "OWINGS MILLS MALL - RP STATION",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71280,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80608,
+                                "destinationSign": "59 REIST PLAZA STATION"
+                            },
+                            {
+                                "patternId": 80609,
+                                "destinationSign": "59 REIST PLAZA STATION"
+                            },
+                            {
+                                "patternId": 80610,
+                                "destinationSign": "59 REIST PLAZA STATION"
+                            },
+                            {
+                                "patternId": 80611,
+                                "destinationSign": "59 REIST PLAZA STATION"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71281,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80612,
+                                "destinationSign": "59 OWINGS MILLS MALL"
+                            },
+                            {
+                                "patternId": 80613,
+                                "destinationSign": "59 RED LAND CT"
+                            },
+                            {
+                                "patternId": 80614,
+                                "destinationSign": "59 RED LAND CT VIA RED BROOK"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7129,
+                "abbr": "05X",
+                "name": "CEDONIA - EUTAW & SARATOGA EXPRESS",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71290,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80615,
+                                "destinationSign": "5X CEDONIA EXPRESS"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71291,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80616,
+                                "destinationSign": "5X DOWNTOWN EXPRESS"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7130,
+                "abbr": "060",
+                "name": "RP STATION - MT. WASH/GREENSPRING",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71300,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80617,
+                                "destinationSign": "60 STEVENSON UNIV"
+                            },
+                            {
+                                "patternId": 80618,
+                                "destinationSign": "60 GREENSPRING STA"
+                            },
+                            {
+                                "patternId": 80619,
+                                "destinationSign": "60 MT WASHINGTON"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71301,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80620,
+                                "destinationSign": "60 REIST PLAZA STATION"
+                            },
+                            {
+                                "patternId": 80621,
+                                "destinationSign": "60 REIST PLAZA STATION"
+                            },
+                            {
+                                "patternId": 80622,
+                                "destinationSign": "60 REIST PLAZA STATION"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7131,
+                "abbr": "061",
+                "name": "BELLEMORE - CHARLES AND PRATT",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71310,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80623,
+                                "destinationSign": "61 INNER HARBOR"
+                            },
+                            {
+                                "patternId": 80624,
+                                "destinationSign": "61  INNER HARBOR"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71311,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80625,
+                                "destinationSign": "61 DEEPDENE RD"
+                            },
+                            {
+                                "patternId": 80626,
+                                "destinationSign": "61 BELLEMORE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7132,
+                "abbr": "064",
+                "name": "NORTH AVE - CURTIS BAY / ENERGY PKY",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71320,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80627,
+                                "destinationSign": "64 CURTIS BAY"
+                            },
+                            {
+                                "patternId": 80628,
+                                "destinationSign": "64 CURTIS BAY"
+                            },
+                            {
+                                "patternId": 80629,
+                                "destinationSign": "64 CURTIS BAY"
+                            },
+                            {
+                                "patternId": 80630,
+                                "destinationSign": "64 RIVIERA BEACH"
+                            },
+                            {
+                                "patternId": 80631,
+                                "destinationSign": "64 RIVIERA BEACH"
+                            },
+                            {
+                                "patternId": 80632,
+                                "destinationSign": "64 RIVIERA BEACH"
+                            },
+                            {
+                                "patternId": 80633,
+                                "destinationSign": "64 ENERGY PKWY"
+                            },
+                            {
+                                "patternId": 80634,
+                                "destinationSign": "64 ENERGY PKWY"
+                            },
+                            {
+                                "patternId": 80635,
+                                "destinationSign": "64 COVINGTON & CROSS"
+                            },
+                            {
+                                "patternId": 80636,
+                                "destinationSign": "64 CURTIS BAY"
+                            },
+                            {
+                                "patternId": 80637,
+                                "destinationSign": "64 MARLEY NECK"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71321,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80638,
+                                "destinationSign": "64 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80639,
+                                "destinationSign": "64 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80640,
+                                "destinationSign": "64 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80641,
+                                "destinationSign": "64 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80642,
+                                "destinationSign": "64 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80643,
+                                "destinationSign": "64 NORTH AVE"
+                            },
+                            {
+                                "patternId": 80644,
+                                "destinationSign": "64 WATERVIEW AVE"
+                            },
+                            {
+                                "patternId": 80645,
+                                "destinationSign": "64 WATERVIEW AVE"
+                            },
+                            {
+                                "patternId": 80646,
+                                "destinationSign": "64 NORTH AVENUE"
+                            },
+                            {
+                                "patternId": 80647,
+                                "destinationSign": "64 NORTH AVE VIA MARLEY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7134,
+                "abbr": "077",
+                "name": "OLD COURT STA - PATAPSCO STA",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71340,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80660,
+                                "destinationSign": "77 PATAPSCO STATION"
+                            },
+                            {
+                                "patternId": 80661,
+                                "destinationSign": "77 U.M.B.C."
+                            },
+                            {
+                                "patternId": 80662,
+                                "destinationSign": "77 SECURITY SQ MALL"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71341,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80663,
+                                "destinationSign": "77 OLD COURT METRO"
+                            },
+                            {
+                                "patternId": 80664,
+                                "destinationSign": "77 OLD COURT METRO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7135,
+                "abbr": "091",
+                "name": "SINAI HOSPITAL - DOWNTOWN       ",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71350,
+                        "dirName": "EASTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80665,
+                                "destinationSign": "91 CITY HALL"
+                            },
+                            {
+                                "patternId": 80666,
+                                "destinationSign": "91 CITY HALL VIA ROGERS STA"
+                            },
+                            {
+                                "patternId": 80667,
+                                "destinationSign": "91 CITY HALL"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71351,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80668,
+                                "destinationSign": "91 SINAI HOSPITAL"
+                            },
+                            {
+                                "patternId": 80669,
+                                "destinationSign": "91 SINAI VIA ROGERS STA"
+                            },
+                            {
+                                "patternId": 80670,
+                                "destinationSign": "91 SINAI VIA ROGERS STA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7136,
+                "abbr": "097",
+                "name": "MONDAWMIN SHUTTLE",
+                "color": "#c0c0c0",
+                "drInfos": [
+                    {
+                        "lineDirId": 71360,
+                        "dirName": "CIRCULAR",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80671,
+                                "destinationSign": "97 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80672,
+                                "destinationSign": "97 MONDAWMIN"
+                            },
+                            {
+                                "patternId": 80673,
+                                "destinationSign": "97 MONDAWMIN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7137,
+                "abbr": "098",
+                "name": "HAMPDEN SHUTTLE",
+                "color": "#c0c0c0",
+                "drInfos": [
+                    {
+                        "lineDirId": 71370,
+                        "dirName": "CIRCULAR",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80674,
+                                "destinationSign": "98 HAMDEN SHUTTLE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7138,
+                "abbr": "099",
+                "name": "OLD COURT - BWI AIRPORT",
+                "color": "#0000ff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71380,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80675,
+                                "destinationSign": "99 BWI AIRPORT"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71381,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80676,
+                                "destinationSign": "99 OLD COURT METRO STA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7139,
+                "abbr": "100",
+                "name": "METRO",
+                "color": "#008000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71390,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80677,
+                                "destinationSign": "REISTERSTOWN PLAZA STATION"
+                            },
+                            {
+                                "patternId": 80678,
+                                "destinationSign": "JOHNS HOPKINS"
+                            },
+                            {
+                                "patternId": 80679,
+                                "destinationSign": "JOHNS HOPKINS"
+                            },
+                            {
+                                "patternId": 80680,
+                                "destinationSign": "JOHNS HOPKINS"
+                            },
+                            {
+                                "patternId": 80681,
+                                "destinationSign": "JOHNS HOPKINS"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71391,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80682,
+                                "destinationSign": "OWINGS MILLS"
+                            },
+                            {
+                                "patternId": 80683,
+                                "destinationSign": "OWINGS MILLS"
+                            },
+                            {
+                                "patternId": 80684,
+                                "destinationSign": "OWINGS MILLS"
+                            },
+                            {
+                                "patternId": 80685,
+                                "destinationSign": "REISTERSTOWN PLAZA STATION"
+                            },
+                            {
+                                "patternId": 80686,
+                                "destinationSign": "ROGERS AVE STATION"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7141,
+                "abbr": "104",
+                "name": "CROMWELL BRIDGE - JOHNS HOPKINS",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71410,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80704,
+                                "destinationSign": "104 HOPKINS HOSPITAL"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71411,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80705,
+                                "destinationSign": "104 CROMWELL P & R"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7142,
+                "abbr": "10X",
+                "name": "ROLLING ROAD - DOWNTOWN EXPRESS",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71420,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80706,
+                                "destinationSign": "10X LIGHT ST EXPRESS"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71421,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80707,
+                                "destinationSign": "10X ROLLING RD EXPRESS"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7143,
+                "abbr": "120",
+                "name": "WHITE MARSH - MONUMENT & RUTLAND ",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71430,
+                        "dirName": "SOUTHBOUND  ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80708,
+                                "destinationSign": "120 BALTIMORE"
+                            },
+                            {
+                                "patternId": 80709,
+                                "destinationSign": "120 BALTIMORE"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71431,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80710,
+                                "destinationSign": "120 WHITE MARSH"
+                            },
+                            {
+                                "patternId": 80711,
+                                "destinationSign": "120 WHITE MARSH"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7144,
+                "abbr": "150",
+                "name": "COLUMBIA-SARATOGA EXT.",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71440,
+                        "dirName": "EASTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80712,
+                                "destinationSign": "150 DOWNTOWN VIA GEIPE RD."
+                            },
+                            {
+                                "patternId": 80713,
+                                "destinationSign": "150 DOWNTOWN"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71441,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80714,
+                                "destinationSign": "150 COLUMBIA"
+                            },
+                            {
+                                "patternId": 80715,
+                                "destinationSign": "150 COLUMBIA VIA GEIPE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7145,
+                "abbr": "15X",
+                "name": "PERRY HALL - PACA STREET EXPRESS",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71450,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80716,
+                                "destinationSign": "15X PERRY HALL"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71451,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80717,
+                                "destinationSign": "15X SARATOGA & PACA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7146,
+                "abbr": "160",
+                "name": "WHISPERING WOOD/ESSEX- HOPKINS HOSP",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71460,
+                        "dirName": "WESTBOUND   ",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80718,
+                                "destinationSign": "160 DOWNTOWN & HOPKINS"
+                            },
+                            {
+                                "patternId": 80719,
+                                "destinationSign": "160 DOWNTOWN & HOPKINS"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71461,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80720,
+                                "destinationSign": "160 WHISPERING WOODS"
+                            },
+                            {
+                                "patternId": 80721,
+                                "destinationSign": "160 FOX RIDGE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7147,
+                "abbr": "19X",
+                "name": "STATE CTR. - CARNEY/GOUCHER BLV EXP",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71470,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80722,
+                                "destinationSign": "19X CARNEY EXPRESS"
+                            },
+                            {
+                                "patternId": 80723,
+                                "destinationSign": "19X GOUCHER & TAYLOR EXP"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71471,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80724,
+                                "destinationSign": "19X STATE CENTER EXPRESS"
+                            },
+                            {
+                                "patternId": 80725,
+                                "destinationSign": "19X STATE CENTER EXPRESS"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7148,
+                "abbr": "200",
+                "name": "LIGHT RAIL",
+                "color": "#00ffff",
+                "drInfos": [
+                    {
+                        "lineDirId": 71480,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80726,
+                                "destinationSign": "HUNT VALLEY"
+                            },
+                            {
+                                "patternId": 80727,
+                                "destinationSign": "HUNT VALLEY"
+                            },
+                            {
+                                "patternId": 80728,
+                                "destinationSign": "NORTH AVE STATION"
+                            },
+                            {
+                                "patternId": 80729,
+                                "destinationSign": "NORTH AVE STATION"
+                            },
+                            {
+                                "patternId": 80730,
+                                "destinationSign": "HUNT VALLEY"
+                            },
+                            {
+                                "patternId": 80731,
+                                "destinationSign": "NORTH AVE STATION"
+                            },
+                            {
+                                "patternId": 80732,
+                                "destinationSign": "HUNT VALLEY"
+                            },
+                            {
+                                "patternId": 80733,
+                                "destinationSign": "FAIRGROUNDS"
+                            },
+                            {
+                                "patternId": 80734,
+                                "destinationSign": "FAIRGROUNDS"
+                            },
+                            {
+                                "patternId": 80735,
+                                "destinationSign": "FAIRGROUNDS"
+                            },
+                            {
+                                "patternId": 80736,
+                                "destinationSign": "PENN STATION"
+                            },
+                            {
+                                "patternId": 80737,
+                                "destinationSign": "HUNT VALLEY"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71481,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80738,
+                                "destinationSign": "CROMWELL STATION"
+                            },
+                            {
+                                "patternId": 80739,
+                                "destinationSign": "CROMWELL STATION"
+                            },
+                            {
+                                "patternId": 80740,
+                                "destinationSign": "NORTH AVE STATION"
+                            },
+                            {
+                                "patternId": 80741,
+                                "destinationSign": "CAMDEN STATION"
+                            },
+                            {
+                                "patternId": 80742,
+                                "destinationSign": "CAMDEN STATION"
+                            },
+                            {
+                                "patternId": 80743,
+                                "destinationSign": "BWI AIRPORT"
+                            },
+                            {
+                                "patternId": 80744,
+                                "destinationSign": "PENN STATION"
+                            },
+                            {
+                                "patternId": 80745,
+                                "destinationSign": "BWI AIRPORT"
+                            },
+                            {
+                                "patternId": 80746,
+                                "destinationSign": "CROMWELL STATION"
+                            },
+                            {
+                                "patternId": 80747,
+                                "destinationSign": "NORTH AVE"
+                            },
+                            {
+                                "patternId": 80748,
+                                "destinationSign": "CAMDEN YARDS"
+                            },
+                            {
+                                "patternId": 80749,
+                                "destinationSign": "CROMWELL STATION"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7153,
+                "abbr": "300",
+                "name": "BRUNSWICK - WASHINGTON",
+                "color": "#ff8000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71530,
+                        "dirName": "EASTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80760,
+                                "destinationSign": "UNION STATION"
+                            },
+                            {
+                                "patternId": 80761,
+                                "destinationSign": "UNION STATION"
+                            },
+                            {
+                                "patternId": 80762,
+                                "destinationSign": "UNION STATION"
+                            },
+                            {
+                                "patternId": 80763,
+                                "destinationSign": "UNION STATION"
+                            },
+                            {
+                                "patternId": 80764,
+                                "destinationSign": "UNION STATION"
+                            },
+                            {
+                                "patternId": 80765,
+                                "destinationSign": "UNION STATION"
+                            },
+                            {
+                                "patternId": 80766,
+                                "destinationSign": "UNION STATION"
+                            },
+                            {
+                                "patternId": 80767,
+                                "destinationSign": "UNION STATION"
+                            },
+                            {
+                                "patternId": 80768,
+                                "destinationSign": "UNION STATION"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71531,
+                        "dirName": "WESTBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80769,
+                                "destinationSign": "BRUNSWICK STA."
+                            },
+                            {
+                                "patternId": 80770,
+                                "destinationSign": "MARTINSBURG STA"
+                            },
+                            {
+                                "patternId": 80771,
+                                "destinationSign": "MARTINSBURG STA"
+                            },
+                            {
+                                "patternId": 80772,
+                                "destinationSign": "BRUNSWICK STA."
+                            },
+                            {
+                                "patternId": 80773,
+                                "destinationSign": "MARTINSBURG STA"
+                            },
+                            {
+                                "patternId": 80774,
+                                "destinationSign": "MARTINSBURG STA"
+                            },
+                            {
+                                "patternId": 80775,
+                                "destinationSign": "MARTINSBURG STA"
+                            },
+                            {
+                                "patternId": 80776,
+                                "destinationSign": "FREDERICK STA."
+                            },
+                            {
+                                "patternId": 80777,
+                                "destinationSign": "FREDERICK STA"
+                            },
+                            {
+                                "patternId": 80778,
+                                "destinationSign": "FREDERICK STA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7154,
+                "abbr": "301",
+                "name": "PENN - WASHINGTON",
+                "color": "#ff8000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71540,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80779,
+                                "destinationSign": "WASHINGTON LOCAL (Train 401)"
+                            },
+                            {
+                                "patternId": 80780,
+                                "destinationSign": "WASHINGTON LOCAL (Train 403)"
+                            },
+                            {
+                                "patternId": 80781,
+                                "destinationSign": "WASHINGTON LOCAL (Train 407)"
+                            },
+                            {
+                                "patternId": 80782,
+                                "destinationSign": "WASHINGTON LOCAL (Train 409)"
+                            },
+                            {
+                                "patternId": 80783,
+                                "destinationSign": "WASHINGTON LOCAL (Train 413)"
+                            },
+                            {
+                                "patternId": 80784,
+                                "destinationSign": "WASHINGTON LOCAL (Train 415)"
+                            },
+                            {
+                                "patternId": 80785,
+                                "destinationSign": "WASHINGTON LOCAL (Train 419)"
+                            },
+                            {
+                                "patternId": 80786,
+                                "destinationSign": "WASHINGTON LOCAL (Train 421)"
+                            },
+                            {
+                                "patternId": 80787,
+                                "destinationSign": "WASHINGTON LOCAL (Train 425)"
+                            },
+                            {
+                                "patternId": 80788,
+                                "destinationSign": "WASHINGTON LOCAL (Train 427)"
+                            },
+                            {
+                                "patternId": 80789,
+                                "destinationSign": "WASHINGTON LOCAL (Train 429)"
+                            },
+                            {
+                                "patternId": 80790,
+                                "destinationSign": "WASHINGTON LOCAL (Train 431)"
+                            },
+                            {
+                                "patternId": 80791,
+                                "destinationSign": "WASHINGTON LOCAL (Train 433)"
+                            },
+                            {
+                                "patternId": 80792,
+                                "destinationSign": "WASHINGTON LOCAL (Train 435)"
+                            },
+                            {
+                                "patternId": 80793,
+                                "destinationSign": "WASHINGTON LOCAL (Train 439)"
+                            },
+                            {
+                                "patternId": 80794,
+                                "destinationSign": "WASHINGTON LOCAL (Train 443)"
+                            },
+                            {
+                                "patternId": 80795,
+                                "destinationSign": "WASHINGTON EXPRESS (Train 445)"
+                            },
+                            {
+                                "patternId": 80796,
+                                "destinationSign": "WASHINGTON LOCAL (Train 447)"
+                            },
+                            {
+                                "patternId": 80797,
+                                "destinationSign": "WASHINGTON LOCAL (Train 449)"
+                            },
+                            {
+                                "patternId": 80798,
+                                "destinationSign": "WASHINGTON LOCAL (Train 451)"
+                            },
+                            {
+                                "patternId": 80799,
+                                "destinationSign": "WASHINGTON LOCAL (Train 453)"
+                            },
+                            {
+                                "patternId": 80800,
+                                "destinationSign": "WASHINGTON (TRAIN 481)"
+                            },
+                            {
+                                "patternId": 80801,
+                                "destinationSign": "WASHINGTON (TRAIN 485)"
+                            },
+                            {
+                                "patternId": 80802,
+                                "destinationSign": "WASHINGTON (TRAIN 487)"
+                            },
+                            {
+                                "patternId": 80803,
+                                "destinationSign": "WASHINGTON (TRAIN 491)"
+                            },
+                            {
+                                "patternId": 80804,
+                                "destinationSign": "WASHINGTON (TRAIN 493)"
+                            },
+                            {
+                                "patternId": 80805,
+                                "destinationSign": "WASHINGTON (TRAIN 495)"
+                            },
+                            {
+                                "patternId": 80806,
+                                "destinationSign": "WASHINGTON (TRAIN 497)"
+                            },
+                            {
+                                "patternId": 80807,
+                                "destinationSign": "WASHINGTON (TRAIN 499)"
+                            },
+                            {
+                                "patternId": 80808,
+                                "destinationSign": "WASHINGTON LOCAL (Train 505)"
+                            },
+                            {
+                                "patternId": 80809,
+                                "destinationSign": "WASHINGTON LOCAL (Train 511)"
+                            },
+                            {
+                                "patternId": 80810,
+                                "destinationSign": "WASHINGTON LOCAL (Train 517)"
+                            },
+                            {
+                                "patternId": 80811,
+                                "destinationSign": "WASHINGTON LOCAL (Train 523)"
+                            },
+                            {
+                                "patternId": 80812,
+                                "destinationSign": "WASHINGTON EXPRESS (Train 537)"
+                            },
+                            {
+                                "patternId": 80813,
+                                "destinationSign": "BALTIMORE LOCAL (Train 579)"
+                            },
+                            {
+                                "patternId": 80814,
+                                "destinationSign": "WASHINGTON LOCAL (Train 641)"
+                            },
+                            {
+                                "patternId": 80815,
+                                "destinationSign": "WASHINGTON (TRAIN 675)"
+                            },
+                            {
+                                "patternId": 80816,
+                                "destinationSign": "WASHINGTON (TRAIN 677)"
+                            },
+                            {
+                                "patternId": 80817,
+                                "destinationSign": "WASHINGTON (TRAIN 681) WS"
+                            },
+                            {
+                                "patternId": 80818,
+                                "destinationSign": "WASHINGTON (TRAIN 683) "
+                            },
+                            {
+                                "patternId": 80819,
+                                "destinationSign": "WASHINGTON (TRAIN 689)"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71541,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80820,
+                                "destinationSign": "BALTIMORE LOCAL (Train 400)"
+                            },
+                            {
+                                "patternId": 80821,
+                                "destinationSign": "BALTIMORE EXPRESS (Train 404)"
+                            },
+                            {
+                                "patternId": 80822,
+                                "destinationSign": "BALTIMORE LOCAL (Train 406)"
+                            },
+                            {
+                                "patternId": 80823,
+                                "destinationSign": "BALTIMORE EXPRESS (Train 408)"
+                            },
+                            {
+                                "patternId": 80824,
+                                "destinationSign": "BALTIMORE LOCAL (Train 412)"
+                            },
+                            {
+                                "patternId": 80825,
+                                "destinationSign": "BALTIMORE LOCAL (Train 414)"
+                            },
+                            {
+                                "patternId": 80826,
+                                "destinationSign": "BALTIMORE LOCAL (Train 416)"
+                            },
+                            {
+                                "patternId": 80827,
+                                "destinationSign": "BALTIMORE LOCAL (Train 418)"
+                            },
+                            {
+                                "patternId": 80828,
+                                "destinationSign": "BALTIMORE LOCAL (Train 422)"
+                            },
+                            {
+                                "patternId": 80829,
+                                "destinationSign": "BALTIMORE LOCAL (Train 424)"
+                            },
+                            {
+                                "patternId": 80830,
+                                "destinationSign": "BALTIMORE LOCAL (Train 426)"
+                            },
+                            {
+                                "patternId": 80831,
+                                "destinationSign": "BALTIMORE EXPRESS (Train 428)"
+                            },
+                            {
+                                "patternId": 80832,
+                                "destinationSign": "BALTIMORE EXPRESS (Train 430)"
+                            },
+                            {
+                                "patternId": 80833,
+                                "destinationSign": "BALTIMORE LOCAL (Train 438)"
+                            },
+                            {
+                                "patternId": 80834,
+                                "destinationSign": "BALTIMORE LOCAL (Train 440)"
+                            },
+                            {
+                                "patternId": 80835,
+                                "destinationSign": "BALTIMORE LOCAL (Train 446)"
+                            },
+                            {
+                                "patternId": 80836,
+                                "destinationSign": "BALTIMORE LOCAL (Train 448)"
+                            },
+                            {
+                                "patternId": 80837,
+                                "destinationSign": "BALTIMORE LOCAL (Train 452)"
+                            },
+                            {
+                                "patternId": 80838,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 476)"
+                            },
+                            {
+                                "patternId": 80839,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 478)"
+                            },
+                            {
+                                "patternId": 80840,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 480)"
+                            },
+                            {
+                                "patternId": 80841,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 482)"
+                            },
+                            {
+                                "patternId": 80842,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 484)"
+                            },
+                            {
+                                "patternId": 80843,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 486)"
+                            },
+                            {
+                                "patternId": 80844,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 488)"
+                            },
+                            {
+                                "patternId": 80845,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 490)"
+                            },
+                            {
+                                "patternId": 80846,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 492)"
+                            },
+                            {
+                                "patternId": 80847,
+                                "destinationSign": "PENN STATION BALTIMORE (TRAIN 494)"
+                            },
+                            {
+                                "patternId": 80848,
+                                "destinationSign": "PERRYVILLE LOCAL (Train 504)"
+                            },
+                            {
+                                "patternId": 80849,
+                                "destinationSign": "PERRYVILLE LOCAL (Train 520)"
+                            },
+                            {
+                                "patternId": 80850,
+                                "destinationSign": "PERRYVILLE LOCAL (Train 532)"
+                            },
+                            {
+                                "patternId": 80851,
+                                "destinationSign": "PERRYVILLE LIMITED (Train 536)"
+                            },
+                            {
+                                "patternId": 80852,
+                                "destinationSign": "PERRYVILLE LOCAL (Train 544)"
+                            },
+                            {
+                                "patternId": 80853,
+                                "destinationSign": "PERRYVILLE LOCAL (Train 548)"
+                            },
+                            {
+                                "patternId": 80854,
+                                "destinationSign": "PERRYVILLE LIMITED (Train 554)"
+                            },
+                            {
+                                "patternId": 80855,
+                                "destinationSign": "MARTIN AIRPORT LOCAL (Train 634)"
+                            },
+                            {
+                                "patternId": 80856,
+                                "destinationSign": "MARTIN AIRPORT LOCAL (Train 612)"
+                            },
+                            {
+                                "patternId": 80857,
+                                "destinationSign": "MARTIN AIRPORT LOCAL (Train 634)"
+                            },
+                            {
+                                "patternId": 80858,
+                                "destinationSign": "BALTIMORE LOCAL (Train 642)"
+                            },
+                            {
+                                "patternId": 80859,
+                                "destinationSign": "MARTIN AIRPORT (TRAIN 688)"
+                            },
+                            {
+                                "patternId": 80860,
+                                "destinationSign": "MARTIN AIRPORT (TRAIN 692)"
+                            },
+                            {
+                                "patternId": 80861,
+                                "destinationSign": "MARTIN AIRPORT (TRAIN 694)"
+                            },
+                            {
+                                "patternId": 80862,
+                                "destinationSign": "MARTIN AIRPORT (TRAIN 696)"
+                            },
+                            {
+                                "patternId": 80863,
+                                "destinationSign": "MARTIN AIRPORT (TRAIN 698)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7155,
+                "abbr": "302",
+                "name": "CAMDEN - WASHINGTON",
+                "color": "#ff8000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71550,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80864,
+                                "destinationSign": "TRAIN 841 TO WASHINGTON UNION STA"
+                            },
+                            {
+                                "patternId": 80865,
+                                "destinationSign": "TRAIN 843 TO WASHINGTON UNION STA"
+                            },
+                            {
+                                "patternId": 80866,
+                                "destinationSign": "TRAIN 845 TO WASHINGTON UNION STA"
+                            },
+                            {
+                                "patternId": 80867,
+                                "destinationSign": "TRAIN 847 TO WASHINGTON UNION STA"
+                            },
+                            {
+                                "patternId": 80868,
+                                "destinationSign": "TRAIN 849 TO WASHINGTON UNION STA"
+                            },
+                            {
+                                "patternId": 80869,
+                                "destinationSign": "TRAIN 851 TO WASHINGTON UNION STA"
+                            },
+                            {
+                                "patternId": 80870,
+                                "destinationSign": "TRAIN 853 TO WASHINGTON UNION STA"
+                            },
+                            {
+                                "patternId": 80871,
+                                "destinationSign": "TRAIN 855 TO WASHINGTON UNION STA"
+                            },
+                            {
+                                "patternId": 80872,
+                                "destinationSign": "TRAIN 857 TO WASHINGTON UNION STA"
+                            }
+                        ]
+                    },
+                    {
+                        "lineDirId": 71551,
+                        "dirName": "NORTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80873,
+                                "destinationSign": "TRAIN 840 TO BALTIMORE CAMDEN STA"
+                            },
+                            {
+                                "patternId": 80874,
+                                "destinationSign": "TRAIN 842 TO BALTIMORE CAMDEN STA"
+                            },
+                            {
+                                "patternId": 80875,
+                                "destinationSign": "TRAIN 844 TO BALTIMORE CAMDEN STA"
+                            },
+                            {
+                                "patternId": 80876,
+                                "destinationSign": "TRAIN 846 TO BALTIMORE CAMDEN STA"
+                            },
+                            {
+                                "patternId": 80877,
+                                "destinationSign": "TRAIN 848 TO BALTIMORE CAMDEN STA"
+                            },
+                            {
+                                "patternId": 80878,
+                                "destinationSign": "TRAIN 850 TO BALTIMORE CAMDEN STA"
+                            },
+                            {
+                                "patternId": 80879,
+                                "destinationSign": "TRAIN 852 TO BALTIMORE CAMDEN STA"
+                            },
+                            {
+                                "patternId": 80880,
+                                "destinationSign": "TRAIN 854 TO BALTIMORE CAMDEN STA"
+                            },
+                            {
+                                "patternId": 80881,
+                                "destinationSign": "TRAIN 856 TO BALTIMORE CAMDEN STA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "lineId": 7165,
+                "abbr": "64X",
+                "name": "NORTH AVE - RIVIERA BEACH EXPRESS ",
+                "color": "#ff0000",
+                "drInfos": [
+                    {
+                        "lineDirId": 71650,
+                        "dirName": "SOUTHBOUND",
+                        "pttrnDestSigns": [
+                            {
+                                "patternId": 80910,
+                                "destinationSign": "64X RIVIERA BEACH EXPRESS"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "responseCode": ""
+    }
+}

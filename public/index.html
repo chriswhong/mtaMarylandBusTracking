@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaflet SODA API Demo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+
+</head>
+<body>
+
+  <div id="map"></div>
+  <div id="infoBox" class="box">
+
+    <div id="infoBoxTitle">Maryland MTA Real-time Vehicle Tracking <span id='startDate'></span>
+    </div>
+
+
+  </div>
+
+  <div id="spinnerBox" class="box">
+
+    <h2>Loading</h2>
+    <img src = './img/ajax-loader.gif'>
+    </div>
+
+
+  </div>
+        
+  <div id = "blurbBox" class = "box">
+     <p>Each marker represents a bus that's reporting live tracking data</p>
+     
+  </div>
+  <div id="getData">
+    <a href="https://nycopendata.socrata.com/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9"><img src="https://raw.githubusercontent.com/betanyc/getDataButton/master/png/110x32.png"></a>
+
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>  
+  <script src="js/script.js"></script> 
+</body>
+</html>
