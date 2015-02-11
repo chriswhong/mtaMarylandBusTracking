@@ -35,6 +35,9 @@
     $.getJSON('/trips', function(data) {
 
       console.log(data);
+
+      $('#vehicles').text(data.length);
+
       //iterate over each 311 complaint, add a marker to the map
       for (var i = 0; i < data.length; i++) {
 
