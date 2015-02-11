@@ -3,6 +3,17 @@ var express = require('express'),
   request = require('request'),
   fs = require('fs');
 
+var allRoutes;
+
+fs.readFile(__dirname + '/data/allRoutes.json', {
+    encoding: 'UTF-8'
+  }, function read(err, data) {
+    if (err) {
+      console.log('Could not load route file', err);
+      return;
+    }
+    allRoutes = JSON.parse(data);
+  });
 
 var app = express();
 
@@ -44,10 +55,23 @@ function transform (rawData) {
   rawData.result.travelPoints.forEach(function(line){
     if (line.EstimatedPoints) {
       line.EstimatedPoints[0].VehicleNumber = line.VehicleNumber;
+      line.EstimatedPoints[0].lineInfo = getLineInfo(line.EstimatedPoints[0].LineDirId);
+      line.EstimatedPoints[0].timestamp = new Date().getTime();
       cleanData.push(line.EstimatedPoints[0]);
     };
   });
 
-  console.log(cleanData);
   return cleanData;
+};
+
+function getLineInfo (lineId) {
+  lineId = lineId+'';
+  var lineInfo = {};
+    allRoutes.result.retLineWithDirInfos.forEach(function(line){
+      if (lineId.indexOf(line.lineId) === 0){
+        lineInfo = line;
+        return line;
+      }
+    });
+  return lineInfo
 };
