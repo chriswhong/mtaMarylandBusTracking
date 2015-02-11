@@ -16,29 +16,29 @@
     }).addTo(map);
 
   var markers = new L.FeatureGroup();
+  var lines = new L.FeatureGroup();
 
+  var prevPoints = {};
+  var curPoints = {};
 
-
-
-  //call getData() once
+  // intial data load
   getData();
 
+  //call getData() every 30 seconds
+  setInterval(getData, 1000 * 30);
+
   function getData() {
-    //clear markers before getting new ones
-    markers.clearLayers();
 
-
-
-
-
-    //use jQuery's getJSON() to call the SODA API for NYC 311
+    //use jQuery's getJSON() to call the trips endpoint
     $.getJSON('/trips', function(data) {
+
+      markers.clearLayers();      
 
       console.log(data);
 
       $('#vehicles').text(data.length);
 
-      //iterate over each 311 complaint, add a marker to the map
+      //iterate over each bus, add a marker to the map
       for (var i = 0; i < data.length; i++) {
 
         var marker = data[i];
@@ -52,6 +52,14 @@
             fillOpacity: 0.8,
           });
 
+        if (marker.VehicleNumber && curPoints['bus' + marker.VehicleNumber]){
+          prevPoints['bus' + marker.VehicleNumber] = JSON.parse(JSON.stringify(curPoints['bus' + marker.VehicleNumber]));
+        }
+
+        if (marker.VehicleNumber && marker.Lat && marker.Lon) {
+          curPoints['bus' + marker.VehicleNumber] = [marker.Lat,marker.Lon];
+        }
+
         markerItem.bindPopup(
           '<h4>Vehicle Number ' + marker.VehicleNumber + '</h4>' 
           + "Line Direction Id " + marker.LineDirId + '<br/>'
@@ -59,10 +67,19 @@
           + "Trip ID " + marker.TripId + '<br/>'
         );
 
+        if (marker.VehicleNumber && prevPoints['bus' + marker.VehicleNumber] && (prevPoints['bus' + marker.VehicleNumber][0] !== curPoints['bus' + marker.VehicleNumber][0] || prevPoints['bus' + marker.VehicleNumber][1] !== curPoints['bus' + marker.VehicleNumber][1])){
+
+          lines.addLayer(L.polyline([ prevPoints['bus' + marker.VehicleNumber], curPoints['bus' + marker.VehicleNumber] ], {
+            color: 'blue'
+          })).addTo(map);
+
+        }
+
         markers.addLayer(markerItem);
       }
       //.addTo(map);
       map.addLayer(markers);
+      map.addLayer(lines);
 
       //fade out the loading spinner
       $('#spinnerBox').fadeOut();
