@@ -52,24 +52,37 @@
             fillOpacity: 0.8,
           });
 
-        if (marker.VehicleNumber && curPoints['bus' + marker.VehicleNumber]){
-          prevPoints['bus' + marker.VehicleNumber] = JSON.parse(JSON.stringify(curPoints['bus' + marker.VehicleNumber]));
+        if (marker.TripId && curPoints['bus' + marker.TripId]){
+          prevPoints['bus' + marker.TripId] = JSON.parse(JSON.stringify(curPoints['bus' + marker.TripId]));
         }
 
-        if (marker.VehicleNumber && marker.Lat && marker.Lon) {
-          curPoints['bus' + marker.VehicleNumber] = [marker.Lat,marker.Lon];
+        if (marker.TripId && marker.Lat && marker.Lon) {
+          curPoints['bus' + marker.TripId] = [marker.Lat,marker.Lon];
         }
+
+        var dir = (marker.lineInfo.drInfos[0].lineDirId === marker.LineDirId) ? marker.lineInfo.drInfos[0] : marker.lineInfo.drInfos[1];
+        var dirName = dir.dirName;
+
+        var stops = '<ul>';
+
+        dir.pttrnDestSigns.forEach(function(stop){
+          stops += '<li>' + stop.destinationSign + '</li>';
+        });
+
+        stops += '</ul>';
 
         markerItem.bindPopup(
           '<h4>Vehicle Number ' + marker.VehicleNumber + '</h4>' 
-          + "Line Direction Id " + marker.LineDirId + '<br/>'
+          + dirName + " " + marker.lineInfo.name + '<br/>'
           + "Time " + marker.Time + '<br/>'
           + "Trip ID " + marker.TripId + '<br/>'
+          + "Stops: " + '<br/>'
+          + stops
         );
 
-        if (marker.VehicleNumber && prevPoints['bus' + marker.VehicleNumber] && (prevPoints['bus' + marker.VehicleNumber][0] !== curPoints['bus' + marker.VehicleNumber][0] || prevPoints['bus' + marker.VehicleNumber][1] !== curPoints['bus' + marker.VehicleNumber][1])){
+        if (marker.TripId && prevPoints['bus' + marker.TripId] && (prevPoints['bus' + marker.TripId][0] !== curPoints['bus' + marker.TripId][0] || prevPoints['bus' + marker.TripId][1] !== curPoints['bus' + marker.TripId][1])){
 
-          lines.addLayer(L.polyline([ prevPoints['bus' + marker.VehicleNumber], curPoints['bus' + marker.VehicleNumber] ], {
+          lines.addLayer(L.polyline([ prevPoints['bus' + marker.TripId], curPoints['bus' + marker.TripId] ], {
             color: 'blue'
           })).addTo(map);
 
