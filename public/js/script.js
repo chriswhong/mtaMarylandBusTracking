@@ -23,8 +23,7 @@
 
   loadRoutes();
 
-  // intial data load
-  getData();
+
 
   //call getData() every 30 seconds
   setInterval(getData, 1000 * 30);
@@ -112,5 +111,7 @@ function loadRoutes() {
     }
   });       
     geojsonLayer.addTo(map);
+      // intial data load
+    getData();
 }
 
