@@ -21,6 +21,8 @@
   var prevPoints = {};
   var curPoints = {};
 
+  loadRoutes();
+
   // intial data load
   getData();
 
@@ -98,5 +100,17 @@
       $('#spinnerBox').fadeOut();
     })
   
+}
+
+//load routes from geoJSON
+function loadRoutes() {
+  var geojsonLayer = new L.GeoJSON.AJAX("./data/localBusSimple.geojson",{
+    style: {
+      "color": "#ff7800",
+      "weight": 2,
+      "opacity": 0.65
+    }
+  });       
+    geojsonLayer.addTo(map);
 }
 
