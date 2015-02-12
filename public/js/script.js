@@ -30,11 +30,11 @@
   function getData() {
 
     //use jQuery's getJSON() to call the trips endpoint
-    $.getJSON('/trips', function(data) {
+    $.getJSON('/trips', function(resp) {
+
+      var data = resp.data;
 
       markers.clearLayers();      
-
-      console.log(data);
 
       $('#vehicles').text(data.length);
 

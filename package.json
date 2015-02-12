@@ -2,9 +2,10 @@
   "name": "mtaMarylandBusTracker",
   "version": "1.0.0",
   "dependencies": {
-    "express": "latest",
     "body-parser": "latest",
+    "express": "latest",
     "fs": "latest",
+    "mongodb": "^1.4.30",
     "request": "latest"
   }
 }
