@@ -44,46 +44,35 @@
 
         var marker = data[i];
         var markerItem = L.circleMarker(
-          [marker.Lat,marker.Lon], {
-            radius: 5,
+          [marker.location.lat,marker.location.lon], {
+            radius: 4,
             fillColor: "steelblue",
             color: "#000",
             weight: 1,
             opacity: 1,
-            fillOpacity: 0.8,
+            fillOpacity: 0.9,
           });
 
-        if (marker.TripId && curPoints['bus' + marker.TripId]){
-          prevPoints['bus' + marker.TripId] = JSON.parse(JSON.stringify(curPoints['bus' + marker.TripId]));
+         if (marker.tripId && curPoints['bus' + marker.tripId]){
+           prevPoints['bus' + marker.tripId] = JSON.parse(JSON.stringify(curPoints['bus' + marker.tripId]));
+         }
+
+        if (marker.tripId && marker.location.lat && marker.location.lon) {
+          curPoints['bus' + marker.tripId] = [marker.location.lat,marker.location.lon];
         }
 
-        if (marker.TripId && marker.Lat && marker.Lon) {
-          curPoints['bus' + marker.TripId] = [marker.Lat,marker.Lon];
-        }
-
-        var dir = (marker.lineInfo.drInfos[0].lineDirId === marker.LineDirId) ? marker.lineInfo.drInfos[0] : marker.lineInfo.drInfos[1];
-        var dirName = dir.dirName;
-
-        var stops = '<ul>';
-
-        dir.pttrnDestSigns.forEach(function(stop){
-          stops += '<li>' + stop.destinationSign + '</li>';
-        });
-
-        stops += '</ul>';
+      
 
         markerItem.bindPopup(
-          '<h4>Vehicle Number ' + marker.VehicleNumber + '</h4>' 
-          + dirName + " " + marker.lineInfo.name + '<br/>'
-          + "Time " + marker.Time + '<br/>'
-          + "Trip ID " + marker.TripId + '<br/>'
-          + "Stops: " + '<br/>'
-          + stops
+          '<h4>Vehicle Number ' + marker.vehicleNumber + '</h4>' 
+          + "Name " + marker.number + " " + marker.name + '<br/>'
+          + "Direction " + marker.direction + '<br/>'
+          + "Trip ID " + marker.tripId + '<br/>'
         );
 
-        if (marker.TripId && prevPoints['bus' + marker.TripId] && (prevPoints['bus' + marker.TripId][0] !== curPoints['bus' + marker.TripId][0] || prevPoints['bus' + marker.TripId][1] !== curPoints['bus' + marker.TripId][1])){
+        if (marker.tripId && prevPoints['bus' + marker.tripId] && (prevPoints['bus' + marker.tripId][0] !== curPoints['bus' + marker.tripId][0] || prevPoints['bus' + marker.tripId][1] !== curPoints['bus' + marker.tripId][1])){
 
-          lines.addLayer(L.polyline([ prevPoints['bus' + marker.TripId], curPoints['bus' + marker.TripId] ], {
+          lines.addLayer(L.polyline([ prevPoints['bus' + marker.tripId], curPoints['bus' + marker.tripId] ], {
             color: 'blue'
           })).addTo(map);
 

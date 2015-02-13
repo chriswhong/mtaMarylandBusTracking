@@ -1,4 +1,7 @@
-var request = require('request');
+var request = require('request'),
+	moment = require('moment');
+
+moment().format();
 
 var Trips = function(config) {
 	this.init(config);
@@ -218,58 +221,62 @@ Trips.prototype.init = function(config) {
 				"lineDirId": "71380"
 			}, {
 				"lineDirId": "71381"
-			}, {
-				"lineDirId": "71390"
-			}, {
-				"lineDirId": "71391"
-			}, {
-				"lineDirId": "71410"
-			}, {
-				"lineDirId": "71411"
-			}, {
-				"lineDirId": "71420"
-			}, {
-				"lineDirId": "71421"
-			}, {
-				"lineDirId": "71430"
-			}, {
-				"lineDirId": "71431"
-			}, {
-				"lineDirId": "71440"
-			}, {
-				"lineDirId": "71441"
-			}, {
-				"lineDirId": "71450"
-			}, {
-				"lineDirId": "71451"
-			}, {
-				"lineDirId": "71460"
-			}, {
-				"lineDirId": "71461"
-			}, {
-				"lineDirId": "71470"
-			}, {
-				"lineDirId": "71471"
-			}, {
-				"lineDirId": "71480"
-			}, {
-				"lineDirId": "71481"
-			}, {
-				"lineDirId": "71530"
-			}, {
-				"lineDirId": "71531"
-			}, {
-				"lineDirId": "71540"
-			}, {
-				"lineDirId": "71541"
-			}, {
-				"lineDirId": "71550"
-			}, {
-				"lineDirId": "71551"
-			}, {
-				"lineDirId": "71650"
 			}],
 			"interval": 1
+
+			//not local buses:
+			// {
+			// 	"lineDirId": "71390"
+			// }, {
+			// 	"lineDirId": "71391"
+			// }, {
+			// 	"lineDirId": "71410"
+			// }, {
+			// 	"lineDirId": "71411"
+			// }, {
+			// 	"lineDirId": "71420"
+			// }, {
+			// 	"lineDirId": "71421"
+			// }, {
+			// 	"lineDirId": "71430"
+			// }, {
+			// 	"lineDirId": "71431"
+			// }, {
+			// 	"lineDirId": "71440"
+			// }, {
+			// 	"lineDirId": "71441"
+			// }, {
+			// 	"lineDirId": "71450"
+			// }, {
+			// 	"lineDirId": "71451"
+			// }, {
+			// 	"lineDirId": "71460"
+			// }, {
+			// 	"lineDirId": "71461"
+			// }, {
+			// 	"lineDirId": "71470"
+			// }, {
+			// 	"lineDirId": "71471"
+			// }, {
+			// 	"lineDirId": "71480"
+			// }, {
+			// 	"lineDirId": "71481"
+			// }, {
+			// 	"lineDirId": "71530"
+			// }, {
+			// 	"lineDirId": "71531"
+			// }, {
+			// 	"lineDirId": "71540"
+			// }, {
+			// 	"lineDirId": "71541"
+			// }, {
+			// 	"lineDirId": "71550"
+			// }, {
+			// 	"lineDirId": "71551"
+			// }, {
+			// 	"lineDirId": "71650"
+			// }],
+			// "interval": 1
 		}
 	};
 	this.trips = config.db.collection('trips');
@@ -279,6 +286,7 @@ Trips.prototype.getCurrent = function(req, res) {
 	var ME = this;
 
 	this.getCurrentFromDB(function(data) {
+		data = false; //force get from MTA while we sort out the data structure
 		if (data === false) {
 			ME.getCurrentFromMTA(function(data) {
 				response = ME.cleanData(data);
@@ -336,22 +344,50 @@ Trips.prototype.cleanData = function(rawData) {
 
 	rawData.result.travelPoints.forEach(function(line) {
 		if (line.EstimatedPoints) {
-			line.EstimatedPoints[0].VehicleNumber = line.VehicleNumber;
-			line.EstimatedPoints[0].lineInfo = ME.getLineInfo(line.EstimatedPoints[0].LineDirId);
-			cleanData.push(line.EstimatedPoints[0]);
+			console.log(line);
+			var e = line.EstimatedPoints[0];
+			lineInfo = ME.getLineInfo(line.EstimatedPoints[0].LineDirId);
+			console.log(lineInfo);
+			console.log(e);
+			var vehicle = {
+				timestamp: moment().format(),
+				location: {
+					lat: e.Lat,
+					lon: e.Lon
+				},
+				heading: Math.round(e.Heading),
+				lineId: Math.round(e.LineDirId/10),
+				directionId: (e.LineDirId & 1) ? 1 : 0,
+				direction: lineInfo.direction,
+				number: lineInfo.number,
+				name: lineInfo.name,
+				tripId: e.TripId,
+				vehicleNumber: line.VehicleNumber
+			}
+
+			console.log(vehicle);
+
+			cleanData.push(vehicle);
 		};
 	});
 
 	return cleanData;
 };
 
-Trips.prototype.getLineInfo = function(lineId) {
-	lineId = lineId + '';
+Trips.prototype.getLineInfo = function(lineDirId) {
+	lineDirId = lineDirId + '';
 	var lineInfo = {};
 	this.allRoutes.result.retLineWithDirInfos.forEach(function(line) {
-		if (lineId.indexOf(line.lineId) === 0) {
-			lineInfo = line;
-			return line;
+		if (lineDirId.indexOf(line.lineId) === 0) {
+			lineInfo.name = line.name;
+			lineInfo.number = line.abbr;
+
+			line.drInfos.forEach(function(direction) {
+				if (lineDirId.indexOf(direction.lineDirId) === 0) {
+					lineInfo.direction = direction.dirName;
+				}
+			});
+			//return line;
 		}
 	});
 	return lineInfo
