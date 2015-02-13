@@ -6,6 +6,7 @@
     "express": "latest",
     "fs": "latest",
     "mongodb": "^1.4.30",
-    "request": "latest"
+    "request": "latest",
+    "moment": "latest"
   }
 }
