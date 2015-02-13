@@ -8,6 +8,9 @@
     "mongodb": "^1.4.30",
     "request": "latest",
     "moment": "latest",
-    "gtfs":"latest"
+    "gtfs":"latest",
+    "csv":"latest",
+    "async":"latest",
+    "unzip2":"latest"
   }
 }
