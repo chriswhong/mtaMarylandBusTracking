@@ -128,8 +128,8 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
 
 
     /* Stoplist */
-    app.get('/stops/:agency/:route_id/:direction_id', function(req, res ,next) {
-      var agency_key = req.params.agency,
+    app.get('/stops/:route_id/:direction_id', function(req, res ,next) {
+      var agency_key = "maryland-transit-administration",
           route_id = req.params.route_id,
             direction_id = parseInt(req.params.direction_id,10);
       gtfs.getStopsByRoute(agency_key, route_id, direction_id, function(e, data) {

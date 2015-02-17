@@ -128,12 +128,19 @@ module.exports = {
               console.log("calling asyc");
               var thisTrip = {}; //necessary because trip is controlled by mongoose?
               thisTrip.trip_id = trip.trip_id;
+              thisTrip.direction_id = trip.direction_id;
               //remove unnecessary Data
               //findStopTimes for this trip
               thisTrip.stopTimes = [];
               findStopTimes(trip.trip_id, function(times) {
                 async.each(times,function(time,cb){
-                  thisTrip.stopTimes.push(time);
+                  var thisTime = {};
+                  thisTime.arrival_time = time.arrival_time;
+                  thisTime.departure_time = time.departure_time;
+                  thisTime.stop_id = time.stop_id;
+                  thisTime.stop_sequence = time.stop_sequence;
+
+                  thisTrip.stopTimes.push(thisTime);
                   cb();
                 },function(){
                   console.log(thisTrip);
@@ -141,14 +148,9 @@ module.exports = {
                   cb();
                 })
               })
-                
-              
-              
-              
             },function(err){
               cb(null, 'trips')
             });
-            
           } else {
             cb(new Error('No trips for this date'), 'trips');
           }
@@ -161,8 +163,9 @@ module.exports = {
       }
 
       StopTime
-        .find(query)
+        .find()
         .where('trip_id').equals(trip_id)
+        .sort('stop_sequence')
         .exec(function(e, times){
             cb(times);
           

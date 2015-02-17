@@ -1,0 +1,127 @@
+<!-- Sample chart for one bus' schedule.  Based on http://bl.ocks.org/mbostock/3883245-->
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script>
+<script>
+
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = 4000 - margin.left - margin.right,
+    height = 200 - margin.top - margin.bottom;
+
+var todayString = moment().format('YYYY-MM-DD');
+console.log(todayString);
+
+var parseDate = d3.time.format("%d-%b-%y").parse;
+
+var x = d3.time.scale()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line = d3.svg.line()
+    .x(function(d) { 
+      var timeString = todayString + " " + d.departure_time;
+   
+      var m = moment(timeString);
+   
+      return x(m.toDate()); 
+
+       })
+    .y(function(d) {
+      return y(getStopIndex(d.stop_id));
+    });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+ var cleanStops = [];
+
+d3.json("stops/7084/0", function(error, data) {
+  console.log(data);
+ 
+  for (var i=0;i<data[0].stops.length;i++) {
+    cleanStops.push(data[0].stops[i].stop_id);
+  }
+
+  console.log(cleanStops);
+
+  d3.json("schedule/7084", function(error, data) {
+    //console.log(data);
+
+    x.domain([new Date('Tue Feb 17 2015'),new Date('Wed Feb 18 2015')]);
+    y.domain([0,82]);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Price ($)");
+
+    //iterate over data, add path for each route
+    data.forEach(function(trip) {
+      //console.log(trip);
+      svg.append("path")
+        .datum(trip.stopTimes)
+        .attr("class", "line")
+        .attr("d", line);
+    })
+    // svg.append("path")
+    //     .datum(data)
+    //     .attr("class", "line")
+    //     .attr("d", line);
+  });
+});
+
+function getStopIndex(stop_id) {
+  return cleanStops.indexOf(stop_id);
+
+}
+
+</script>
