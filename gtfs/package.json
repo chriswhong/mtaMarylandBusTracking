@@ -1,0 +1,84 @@
+{
+  "name": "gtfs",
+  "description": "Download GTFS transit data into mongodb and expose routes, stops, times and more",
+  "version": "0.1.0",
+  "author": {
+    "name": "Brendan Nee",
+    "email": "me@bn.ee"
+  },
+  "contributors": [
+    {
+      "name": "Jason Schapiro",
+      "email": "yono38@gmail.com"
+    },
+    {
+      "name": "Jacob Childress",
+      "email": "jacobc@gmail.com"
+    },
+    {
+      "name": "wdalrymple"
+    },
+    {
+      "name": "Matt Gruskin"
+    },
+    {
+      "name": "Ethan Lo",
+      "email": "ethan@ethanlo.com"
+    }
+  ],
+  "dependencies": {
+    "async": "~0.9.0",
+    "csv": "~0.4.1",
+    "mongoose": "~3.8.21",
+    "mongodb": "~1.4.26",
+    "request": "~2.51.0",
+    "underscore": "~1.7.0",
+    "unzip2": "~0.2.5"
+  },
+  "keywords": [
+    "transit",
+    "gtfs",
+    "transportation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brendannee/node-gtfs"
+  },
+  "main": "index",
+  "devDependencies": {
+    "csv-parse": "0.0.6",
+    "should": "^4.4.2",
+    "supertest": "^0.15.0",
+    "timekeeper": "0.0.5"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test mocha ./test/mocha/**/*.js --reporter spec",
+    "start": "node examples/express/index.js"
+  },
+  "gitHead": "49ff32c72d084eca8c2c206b106d8e6d68814f16",
+  "bugs": {
+    "url": "https://github.com/brendannee/node-gtfs/issues"
+  },
+  "homepage": "https://github.com/brendannee/node-gtfs",
+  "_id": "gtfs@0.1.0",
+  "_shasum": "f33391f435c1ea1d5f8a81dd76aeefed6900a66f",
+  "_from": "gtfs@",
+  "_npmVersion": "2.1.16",
+  "_nodeVersion": "0.10.33",
+  "_npmUser": {
+    "name": "brendannee",
+    "email": "me@bn.ee"
+  },
+  "maintainers": [
+    {
+      "name": "brendannee",
+      "email": "me@bn.ee"
+    }
+  ],
+  "dist": {
+    "shasum": "f33391f435c1ea1d5f8a81dd76aeefed6900a66f",
+    "tarball": "http://registry.npmjs.org/gtfs/-/gtfs-0.1.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/gtfs/-/gtfs-0.1.0.tgz"
+}
