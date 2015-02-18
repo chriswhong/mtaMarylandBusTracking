@@ -280,7 +280,31 @@ Trips.prototype.init = function(config) {
 		}
 	};
 	this.trips = config.db.collection('trips');
+	this.logs = config.db.collection('logs');
 };
+
+Trips.prototype.logData = function(req, res) {
+	var ME = this;
+	console.log("Logging Data!");
+	ME.getCurrentFromMTAForSave(function(data) {
+		response = ME.cleanDataForSave(data);
+
+		console.log(response);
+
+		response.forEach(function(tripLog){
+			ME.logs.insert(tripLog, function() {
+				console.log("Wrote a log to the DataBase");
+			});
+		})
+
+
+		res.json({
+			data: response
+		});
+	})
+}
+
+
 
 Trips.prototype.getCurrent = function(req, res) {
 	var ME = this;
@@ -296,12 +320,32 @@ Trips.prototype.getCurrent = function(req, res) {
 			});
 		} else {
 			response = ME.cleanData(data);
+			
 			res.json({
 				data: response
 			});
 		}
 	});
 };
+
+Trips.prototype.getCurrentFromMTAForSave = function(cb) {
+	var ME = this;
+	request.post({
+		headers: {
+			'content-type': 'application/json'
+		},
+		url: 'http://realtimemap.mta.maryland.gov/RealTimeManager',
+		body: JSON.stringify(ME.payloadString)
+	}, function(error, response, body) {
+		var data = JSON.parse(body);
+		cb(data);
+		//data.reqTime = new Date();
+		//ME.trips.insert(data, function() {
+		// 	console.log('inserted new trip data for ' + data.reqTime);
+		// });
+	});
+};
+
 
 Trips.prototype.getCurrentFromMTA = function(cb) {
 	var ME = this;
@@ -373,6 +417,44 @@ Trips.prototype.cleanData = function(rawData) {
 
 	return cleanData;
 };
+
+Trips.prototype.cleanDataForSave = function(rawData) {
+
+	var ME = this,
+		cleanData = []
+
+	rawData.result.travelPoints.forEach(function(line) {
+		if (line.EstimatedPoints) {
+			console.log(line);
+			var e = line.EstimatedPoints[0];
+			lineInfo = ME.getLineInfo(line.EstimatedPoints[0].LineDirId);
+			console.log(lineInfo);
+			console.log(e);
+			var vehicle = {
+				timestamp: moment().format(),
+				location: {
+					lat: e.Lat,
+					lon: e.Lon
+				},
+				//heading: Math.round(e.Heading),
+				lineId: Math.round(e.LineDirId/10),
+				directionId: (e.LineDirId & 1) ? 1 : 0,
+				//direction: lineInfo.direction,
+				//number: lineInfo.number,
+				//name: lineInfo.name,
+				tripId: e.TripId,
+				vehicleNumber: line.VehicleNumber
+			}
+
+			console.log(vehicle);
+
+			cleanData.push(vehicle);
+		};
+	});
+
+	return cleanData;
+};
+
 
 Trips.prototype.getLineInfo = function(lineDirId) {
 	lineDirId = lineDirId + '';
