@@ -139,6 +139,7 @@ module.exports = {
                   thisTime.departure_time = time.departure_time;
                   thisTime.stop_id = time.stop_id;
                   thisTime.stop_sequence = time.stop_sequence;
+                  thisTime.stopIndex = getStopIndex(route_id,thisTime.stop_id, thisTrip.direction_id);
 
                   thisTrip.stopTimes.push(thisTime);
                   cb();
@@ -155,6 +156,13 @@ module.exports = {
             cb(new Error('No trips for this date'), 'trips');
           }
         });
+    }
+    //figure out how many stops into the trip a given stop is, for charting purposes
+    function getStopIndex(route_id,stop_id,direction_id) {
+      //get array of all stop_ids for given route and direction
+      //of course, do this only once for 
+
+      //return index of our stop_id
     }
 
     function findStopTimes(trip_id, cb){

@@ -35,8 +35,11 @@ body {
 <script>
 
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 4000 - margin.left - margin.right,
-    height = 200 - margin.top - margin.bottom;
+    width = 1000 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+var longest = [[],[]];
+
 
 var todayString = moment().format('YYYY-MM-DD');
 console.log(todayString);
@@ -48,6 +51,8 @@ var x = d3.time.scale()
 
 var y = d3.scale.linear()
     .range([height, 0]);
+
+
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -67,7 +72,10 @@ var line = d3.svg.line()
 
        })
     .y(function(d) {
-      return y(getStopIndex(d.stop_id));
+      console.log(d.stop_id + " " + direction_id);
+      console.log(getStopIndex(d.stop_id));
+      console.log(y(getStopIndex(d.stop_id)));
+      return y(getStopIndex(d.stop_id)); 
     });
 
 var svg = d3.select("body").append("svg")
@@ -76,22 +84,31 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
- var cleanStops = [];
+ var cleanStops = [],
+  direction_id;
 
-d3.json("stops/7084/0", function(error, data) {
-  console.log(data);
- 
-  for (var i=0;i<data[0].stops.length;i++) {
-    cleanStops.push(data[0].stops[i].stop_id);
-  }
 
-  console.log(cleanStops);
 
   d3.json("schedule/7084", function(error, data) {
-    //console.log(data);
+    //when the data is first loaded, figure out what the longest trip is for each direction by counting stopTimes
 
-    x.domain([new Date('Tue Feb 17 2015'),new Date('Wed Feb 18 2015')]);
-    y.domain([0,82]);
+
+    data.forEach(function(trip){
+      //console.log(trip);
+      var direction = trip.direction_id;
+      var stopCount = trip.stopTimes.length;
+
+      if (stopCount > longest[direction].length) { 
+        longest[direction] = trip.stopTimes;
+      };
+    
+    });
+
+    console.log(longest);
+
+    x.domain([new Date('Tue Feb 17 2015 04:00:00'),new Date('Wed Feb 18 2015')]);
+    y.domain([0,100]);
+
 
     svg.append("g")
         .attr("class", "x axis")
@@ -110,7 +127,7 @@ d3.json("stops/7084/0", function(error, data) {
 
     //iterate over data, add path for each route
     data.forEach(function(trip) {
-      var direction_id = trip.direction_id;
+      direction_id = trip.direction_id;
       //console.log(trip);
       svg.append("path")
         .datum(trip.stopTimes)
@@ -124,11 +141,22 @@ d3.json("stops/7084/0", function(error, data) {
     //     .attr("class", "line")
     //     .attr("d", line);
   });
-});
 
-function getStopIndex(stop_id) {
-  return cleanStops.indexOf(stop_id);
+function getStopIndex(stop_id) { //stopIndex is between 0 and 99, represents the sequence along the route for a given stop
+  
+  for (var i=0; i<longest[direction_id].length; i++) {
+    if (longest[direction_id][i].stop_id == stop_id) {
+      var stopIndex = (i / longest[direction_id].length) * 100;
+      if (direction_id == 1) {
+        stopIndex = 100 - stopIndex;
+      }
+      return stopIndex;
+    }
+  }
 
+  return 50;
 }
+
+
 
 </script>
