@@ -12,6 +12,7 @@
     "csv":"latest",
     "async":"latest",
     "unzip2":"latest",
-    "mongoose":"latest"
+    "mongoose":"latest",
+    "underscore":"latest"
   }
 }
