@@ -92,15 +92,48 @@
 
 //load routes from geoJSON
 function loadRoutes() {
-  var geojsonLayer = new L.GeoJSON.AJAX("./data/localBusSimple.geojson",{
-    style: {
-      "color": "#ff7800",
-      "weight": 2,
-      "opacity": 0.65
-    }
-  });       
-    geojsonLayer.addTo(map);
-      // intial data load
+  $.getJSON("./data/localRoutesCleaned.geojson", function(data){
+    
+    data.features.forEach(function(feature){
+      $('#rightSideBar').append(buildRouteListItem(feature.properties));
+    });
+    
+
+    var geojsonLayer = L.geoJson(data,{
+      style: function(feature) {
+        console.log(feature);
+        return {
+          "color": "#" + feature.properties.color,
+          "weight": 1.5,
+          "opacity": 0.5
+        };
+      }
+    }).addTo(map);
+  });
+
+  // var geojsonLayer = new L.GeoJSON.AJAX("./data/localRoutesCleaned.geojson",{
+  //   style: {
+  //     "color": "#ff7800",
+  //     "weight": 2,
+  //     "opacity": 0.65
+  //   }
+  // });       
+  //   geojsonLayer.addTo(map);
+    // intial data load
     getData();
+}
+
+function buildRouteListItem(p) {
+  var textColor;
+  (p.color == 'FFFF00') ? textColor = '#444' : textColor = '';
+
+
+  var s = '';
+  s += '<div class ="route ' + p.Route_ID + '">';
+  s += '<span class = "routeNumber" style = "background-color:#'+ p.color +';color:' + textColor + '">' + p.Route_Numb + '</span>';
+  s += '<span class = "routeName">' + p.Route_Name + '</span>';
+  s += '</div>';
+  return s;
+
 }
 
