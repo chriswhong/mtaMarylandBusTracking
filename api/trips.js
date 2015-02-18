@@ -328,6 +328,55 @@ Trips.prototype.getCurrent = function(req, res) {
 	});
 };
 
+Trips.prototype.getHistory = function(req, res) {
+	var ME = this;
+	var route_id = req.params.route_id;
+
+	//console.log(trip_id);
+
+	//get time from 3 hours ago
+
+	var fourHoursAgo = moment().subtract(4, 'hours');
+	//console.log(time.format());
+
+	// var query = { 
+	// 	'timestamp': {$gt: fourHoursAgo.toISOString()},
+	// 	'lineId': parseInt(route_id)
+	//}
+
+	//console.log(query);
+
+	// this.logs.find(query).toArray(function(err, results) {
+	// 	console.log(results);
+	// 	if (err) {
+	// 		//cb(false);
+	// 	}
+	// 	res.json({
+	// 			data: results
+	// 	});
+	// });
+
+	this.logs.aggregate([
+	{	
+		$match:{lineId:7084}
+			
+	},
+	{
+		$group:{
+			_id:'$tripId',
+			count: { $sum: 1 }
+		}
+	}
+	],function (err, result){
+		console.log(result);
+		res.json({
+				data: result
+		});
+	});
+
+	
+};
+
 Trips.prototype.getCurrentFromMTAForSave = function(cb) {
 	var ME = this;
 	request.post({

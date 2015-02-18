@@ -52,6 +52,15 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
       trips.logData(req, res);
     });
 
+    app.get('/history/:route_id', function(req, res) {
+      var trips = new Trips({
+        allRoutes: JSON.parse(data),
+        db: db,
+        cacheLatency: 30
+      });
+      trips.getHistory(req,res);
+    });
+
 
     //Adding endpoints from the node-gtfs example app.  I need some help putting them into their own external file.
        
