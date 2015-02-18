@@ -24,6 +24,10 @@ body {
   stroke-width: 1.5px;
 }
 
+.dir0 {
+  stroke: red;
+}
+
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.js"></script>
@@ -106,10 +110,13 @@ d3.json("stops/7084/0", function(error, data) {
 
     //iterate over data, add path for each route
     data.forEach(function(trip) {
+      var direction_id = trip.direction_id;
       //console.log(trip);
       svg.append("path")
         .datum(trip.stopTimes)
-        .attr("class", "line")
+        .attr("class", function(d){
+          return "line dir" + direction_id ;
+        })
         .attr("d", line);
     })
     // svg.append("path")
