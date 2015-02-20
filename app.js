@@ -6,7 +6,8 @@ var express = require('express'),
   gtfs = require('./gtfs'),
   jsonxml = require('jsontoxml'),
   request = require('request'),
-  xml2js = require('xml2js');
+  xml2js = require('xml2js'),
+  moment = require('moment');
 
 var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/mtamdbustrack';
 
@@ -71,6 +72,7 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
 
     function getBusTimes(req,res) {
       console.log(req.params);
+    
 
       var payload = {
         'GetBusTimes' : {
@@ -78,11 +80,11 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
             'StopId': req.params.stop_id,
             'Radius': 0,
             'GetStopTimes': 1,
-            'Date': '02-20-2015',
+            'Date': moment().format('MM-DD-YYYY'),
             'NumStopTimes': 20,
             'GetStopTripInfo': 1,
             'SuppressLinesUnloadOnly': 1,
-            'FromTime':'10:44a',
+            'FromTime':moment().format('h:mma').slice(0,-1), //time now as h:mma
             'ToTime': '4:59a',
             'Client':'InfoWeb'
           }
