@@ -1,6 +1,7 @@
 // This example shows how to use the bounding box of a leaflet view to create a
 // SODA within_box query, pulling data for the current map view from a Socrata dataset
-
+var currentData, 
+  currentRoutes;
   //initialize the leaflet map, set options, view, and basemap
   var map = L.map('map', {
       //zoomControl: false,
@@ -33,16 +34,16 @@
     //use jQuery's getJSON() to call the trips endpoint
     $.getJSON('/trips', function(resp) {
 
-      var data = resp.data;
+      currentData = resp.data;
 
       markers.clearLayers();      
 
-      $('#vehicles').text(data.length);
+      $('#vehicles').text(currentData.length);
 
       //iterate over each bus, add a marker to the map
-      for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < currentData.length; i++) {
 
-        var marker = data[i];
+        var marker = currentData[i];
         console.log(marker);
         var markerItem = L.circleMarker(
           [marker.location.lat,marker.location.lon], {
@@ -98,7 +99,7 @@ function loadRoutes() {
     g = svg.append("g").attr("class", "leaflet-zoom-hide");
 
   $.getJSON("./data/localRoutesCleaned.geojson", function(data){
-    
+    currentRoutes = data;
     data.features.forEach(function(feature){
       $('#rightSideBar').append(buildRouteListItem(feature.properties));
     });
@@ -185,5 +186,27 @@ function filterMap(route_id) {
   $('.routePath, .circlePath').not('.' + route_id).fadeOut(200);
   $('.' + route_id).fadeIn(200);
 
+  $('#routeName').text(getRouteName(route_id));
+
+  $('#buses').text(countVehicles(route_id));
+
 }
 
+function getRouteName(route_id) {
+  for(var i=0;i<currentRoutes.features.length;i++) {
+    var f = currentRoutes.features[i].properties;
+    if (f.Route_ID==route_id) {
+      return f.Route_Numb + " " + f.Route_Name;
+    }
+  }
+}
+
+function countVehicles(route_id) {
+  var count = 0;
+  for(var i=0; i<currentData.length; i++) {
+    if (currentData[i].lineId == route_id) {
+      count++;
+    }
+  }
+  return count;
+}

@@ -112,3 +112,11 @@ a,a:visited {
   stroke-width:1.5;
   opacity:.6;
 }
+
+#statusBox {
+  position: absolute;
+  top: 128px;
+  width: 325px;
+  padding: 14px;
+  font-size: 20px;
+}
