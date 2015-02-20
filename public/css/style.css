@@ -90,6 +90,7 @@ a,a:visited {
   font-size: 12px;
   margin-bottom:5px;
   line-height: 16px;
+  cursor:pointer;
 }
 
 .routeNumber {
@@ -99,4 +100,15 @@ a,a:visited {
   border-radius: 4px;
   font-size: 13px;
   margin-right: 4px;
+}
+
+.highlight {
+  background: yellow;
+  box-shadow: 0 0 3px 3px yellow;
+}
+
+.routePath {
+  fill:none;
+  stroke-width:1.5;
+  opacity:.6;
 }

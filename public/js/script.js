@@ -43,6 +43,7 @@
       for (var i = 0; i < data.length; i++) {
 
         var marker = data[i];
+        console.log(marker);
         var markerItem = L.circleMarker(
           [marker.location.lat,marker.location.lon], {
             radius: 4,
@@ -51,6 +52,7 @@
             weight: 1,
             opacity: 1,
             fillOpacity: 0.9,
+            className: "circlePath " + marker.lineId.toString()
           });
 
          if (marker.tripId && curPoints['bus' + marker.tripId]){
@@ -92,6 +94,9 @@
 
 //load routes from geoJSON
 function loadRoutes() {
+  var svg = d3.select(map.getPanes().overlayPane).append("svg"),
+    g = svg.append("g").attr("class", "leaflet-zoom-hide");
+
   $.getJSON("./data/localRoutesCleaned.geojson", function(data){
     
     data.features.forEach(function(feature){
@@ -99,27 +104,66 @@ function loadRoutes() {
     });
     
 
-    var geojsonLayer = L.geoJson(data,{
-      style: function(feature) {
-        console.log(feature);
-        return {
-          "color": "#" + feature.properties.color,
-          "weight": 1.5,
-          "opacity": 0.5
-        };
-      }
-    }).addTo(map);
-  });
+    //listeners created AFTER the sidebar is populated
+    $('.route').hover(function() {
+      $(this).toggleClass('highlight');
+      var selectedRoute = $(this).attr('route_id');
+      filterMap(selectedRoute);
+    });
 
-  // var geojsonLayer = new L.GeoJSON.AJAX("./data/localRoutesCleaned.geojson",{
-  //   style: {
-  //     "color": "#ff7800",
-  //     "weight": 2,
-  //     "opacity": 0.65
-  //   }
-  // });       
-  //   geojsonLayer.addTo(map);
-    // intial data load
+    // var geojsonLayer = L.geoJson(data,{
+    //   style: function(feature) {
+    //     console.log(feature);
+    //     return {
+    //       "color": "#" + feature.properties.color,
+    //       "weight": 1.5,
+    //       "opacity": 0.5
+    //     };
+    //   }
+    // }).addTo(map);
+
+var transform = d3.geo.transform({point: projectPoint}),
+      path = d3.geo.path().projection(transform);
+
+  var feature = g.selectAll("path")
+      .data(data.features)
+    .enter()
+    .append("path")
+    .attr('stroke',function(d){
+      return '#' + d.properties.color;
+    })
+    .attr('class',function(d){
+      return 'routePath ' + d.properties.Route_ID;
+    });
+
+  map.on("viewreset", reset);
+  reset();
+
+  // Reposition the SVG to cover the features.
+  function reset() {
+    var bounds = path.bounds(data),
+        topLeft = bounds[0],
+        bottomRight = bounds[1];
+
+    svg .attr("width", bottomRight[0] - topLeft[0])
+        .attr("height", bottomRight[1] - topLeft[1])
+        .style("left", topLeft[0] + "px")
+        .style("top", topLeft[1] + "px");
+
+    g   .attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
+
+    feature.attr("d", path);
+  }
+
+  // Use Leaflet to implement a D3 geometric transformation.
+  function projectPoint(x, y) {
+    var point = map.latLngToLayerPoint(new L.LatLng(y, x));
+    this.stream.point(point.x, point.y);
+  }
+
+
+  });  //getJSON
+
     getData();
 }
 
@@ -127,13 +171,19 @@ function buildRouteListItem(p) {
   var textColor;
   (p.color == 'FFFF00') ? textColor = '#444' : textColor = '';
 
-
   var s = '';
-  s += '<div class ="route ' + p.Route_ID + '">';
+  s += '<div class ="route route' + p.Route_ID + '" route_id=' + p.Route_ID + '>';
   s += '<span class = "routeNumber" style = "background-color:#'+ p.color +';color:' + textColor + '">' + p.Route_Numb + '</span>';
   s += '<span class = "routeName">' + p.Route_Name + '</span>';
   s += '</div>';
   return s;
+
+}
+
+
+function filterMap(route_id) {
+  $('.routePath, .circlePath').not('.' + route_id).fadeOut(200);
+  $('.' + route_id).fadeIn(200);
 
 }
 
