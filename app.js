@@ -3,7 +3,10 @@ var express = require('express'),
   fs = require('fs'),
   Trips = require('./api/trips'),
   mongo = require('mongodb'),
-  gtfs = require('./gtfs');
+  gtfs = require('./gtfs'),
+  jsonxml = require('jsontoxml'),
+  request = require('request'),
+  xml2js = require('xml2js');
 
 var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/mtamdbustrack';
 
@@ -61,6 +64,86 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
       trips.getHistory(req,res);
     });
 
+    //proxy API for getBusTimes
+    app.get('/bustimes/:stop_id', function(req, res) {
+      getBusTimes(req,res);
+    });
+
+    function getBusTimes(req,res) {
+      console.log(req.params);
+
+      var payload = {
+        'GetBusTimes' : {
+          'LinesRequest' : {
+            'StopId': req.params.stop_id,
+            'Radius': 0,
+            'GetStopTimes': 1,
+            'Date': '02-20-2015',
+            'NumStopTimes': 20,
+            'GetStopTripInfo': 1,
+            'SuppressLinesUnloadOnly': 1,
+            'FromTime':'10:44a',
+            'ToTime': '4:59a',
+            'Client':'InfoWeb'
+          }
+        }
+      }
+
+      var xml = jsonxml(payload);
+
+      var xmlStartString = '<?xml version="1.0" encoding="UTF-8"?><SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><SOAP-ENV:Body>';
+      var xmlEndString = '</SOAP-ENV:Body></SOAP-ENV:Envelope>'
+
+      var xmlPayload = xmlStartString + xml + xmlEndString;
+      xmlPayload = xmlPayload.replace('<Date>','<Date tcftype="1e0210">')
+        .replace('<FromTime>','<FromTime tcftype="140010">')
+        .replace('<ToTime>','<ToTime tcftype="140010">');
+
+      console.log(xmlPayload);
+
+      request.post({
+        headers: {
+          'content-type': 'text/xml; charset=UTF-8'
+        },
+        url: 'http://mybustracker.mta.maryland.gov/InfoWeb',
+        body: xmlPayload
+      }, function(error, response, body) {
+        var parser = new xml2js.Parser();
+        parser.parseString(body, function (err, result) {
+          console.log(result);
+          res.send(result);
+        });
+        
+      });
+
+
+ 
+// var parser = new xml2js.Parser();
+// fs.readFile(__dirname + '/foo.xml', function(err, data) {
+//     parser.parseString(data, function (err, result) {
+//         console.dir(result);
+//         console.log('Done');
+//     });
+// });
+
+      // <GetBusTimes>
+      //    <LinesRequest>
+      //       <StopId>103</StopId>
+      //       <Radius>0</Radius>
+      //       <GetStopTimes>1</GetStopTimes>
+      //       <Date tcftype="1e0210">02-20-2015</Date>
+      //       <NumStopTimes>20</NumStopTimes>
+      //       <GetStopTripInfo>1</GetStopTripInfo>
+      //       <SuppressLinesUnloadOnly>1</SuppressLinesUnloadOnly>
+      //       <FromTime tcftype="140010">10:44a</FromTime>
+      //       <ToTime tcftype="140010">4:59a</ToTime>
+      //       <Client>InfoWeb</Client>
+      //    </LinesRequest>
+      // </GetBusTimes>
+
+
+
+    }
 
     //Adding endpoints from the node-gtfs example app.  I need some help putting them into their own external file.
        
