@@ -89,8 +89,13 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
         url: 'http://realtimemap.mta.maryland.gov/InfoWeb',
         body: JSON.stringify(payload)
       }, function(error, response, body) {
+
+        console.log(body);
+
         body = JSON.parse(body);
-        
+
+        if(body.result[0].StopTimeResult[0].StopTimes.length>0) {
+
         var stops = body.result[0].StopTimeResult[0].StopTimes;
 
         var cleanStops = [];
@@ -139,7 +144,7 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
 
 
 
-        
+        } else { res.send('no buses for this stop')}
       });
 
 
