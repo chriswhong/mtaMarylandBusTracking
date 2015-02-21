@@ -4,9 +4,7 @@ var express = require('express'),
   Trips = require('./api/trips'),
   mongo = require('mongodb'),
   gtfs = require('./gtfs'),
-  jsonxml = require('jsontoxml'),
   request = require('request'),
-  xml2js = require('xml2js'),
   moment = require('moment');
 
 var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/mtamdbustrack';
@@ -73,75 +71,77 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
     function getBusTimes(req,res) {
       console.log(req.params);
     
-
-      var payload = {
-        'GetBusTimes' : {
-          'LinesRequest' : {
-            'StopId': req.params.stop_id,
-            'Radius': 0,
-            'GetStopTimes': 1,
-            'Date': moment().format('MM-DD-YYYY'),
-            'NumStopTimes': 20,
-            'GetStopTripInfo': 1,
-            'SuppressLinesUnloadOnly': 1,
-            'FromTime':moment().format('h:mma').slice(0,-1), //time now as h:mma
-            'ToTime': '4:59a',
-            'Client':'InfoWeb'
-          }
+      var payload =  {  
+        "version":"1.1",
+        "method":"GetBusTimes",
+        "params":{  
+          "stopId":req.params.stop_id,
+          "Radius":-1,
+          "NumTimesPerLine":5,
+          "NumStopTimes":20
         }
       }
 
-      var xml = jsonxml(payload);
-
-      var xmlStartString = '<?xml version="1.0" encoding="UTF-8"?><SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><SOAP-ENV:Body>';
-      var xmlEndString = '</SOAP-ENV:Body></SOAP-ENV:Envelope>'
-
-      var xmlPayload = xmlStartString + xml + xmlEndString;
-      xmlPayload = xmlPayload.replace('<Date>','<Date tcftype="1e0210">')
-        .replace('<FromTime>','<FromTime tcftype="140010">')
-        .replace('<ToTime>','<ToTime tcftype="140010">');
-
-      console.log(xmlPayload);
-
       request.post({
         headers: {
-          'content-type': 'text/xml; charset=UTF-8'
+          'content-type': 'application/json'
         },
-        url: 'http://mybustracker.mta.maryland.gov/InfoWeb',
-        body: xmlPayload
+        url: 'http://realtimemap.mta.maryland.gov/InfoWeb',
+        body: JSON.stringify(payload)
       }, function(error, response, body) {
-        var parser = new xml2js.Parser();
-        parser.parseString(body, function (err, result) {
-          console.log(result);
-          res.send(result);
+        body = JSON.parse(body);
+        
+        var stops = body.result[0].StopTimeResult[0].StopTimes;
+
+        var cleanStops = [];
+
+        stops.forEach(function(stop){
+          var newStop = {
+            'route_number': stop.LineAbbr,
+            'route_name': stop.LineName,
+            'direction_name': stop.DirectionName,
+            'route_id': parseInt(stop.LineDirId.toString().slice(0,-1)),
+            'stop_time': moment().startOf('day').add(stop.ETime,'seconds').format(), //if between midnight and 4:59 am, need to roll back to previous day's start?
+            'realtime' : realTimeStatus(stop)
+          }
+
+          cleanStops.push(newStop);
+
         });
+
+        var stopInfo = {
+          'stop_id': req.params.stop_id,
+          'stop_name': body.result[0].StopTimeResult[0].Lines[0].StopName,
+          'stop_times': cleanStops,
+          'timestamp': moment().format()
+        }
+
+        res.json(stopInfo);
+        //res.json(body);
+
+        function realTimeStatus(stop) {
+          var realTimeStops = body.result[0].RealTimeResults;
+
+          for (var i=0; i<realTimeStops.length; i++) {
+            var s = stop;
+            var r = realTimeStops[i];
+            if((s.TripId == r.TripId) && (s.BlockId == r.BlockId) && (r.Lat != 0 && r.Lon != 0) && !r.IgnoreAdherence) {
+              return true
+            }
+          }
+
+          return false;
+
+          //if ((t.TripId == a.TripId) && (t.BlockId == a.BlockId) && (a.Lat != 0 && a.Lon != 0) && !a.IgnoreAdherence)
+        }
+
+        //res.send(body);
+
+
+
         
       });
 
-
- 
-// var parser = new xml2js.Parser();
-// fs.readFile(__dirname + '/foo.xml', function(err, data) {
-//     parser.parseString(data, function (err, result) {
-//         console.dir(result);
-//         console.log('Done');
-//     });
-// });
-
-      // <GetBusTimes>
-      //    <LinesRequest>
-      //       <StopId>103</StopId>
-      //       <Radius>0</Radius>
-      //       <GetStopTimes>1</GetStopTimes>
-      //       <Date tcftype="1e0210">02-20-2015</Date>
-      //       <NumStopTimes>20</NumStopTimes>
-      //       <GetStopTripInfo>1</GetStopTripInfo>
-      //       <SuppressLinesUnloadOnly>1</SuppressLinesUnloadOnly>
-      //       <FromTime tcftype="140010">10:44a</FromTime>
-      //       <ToTime tcftype="140010">4:59a</ToTime>
-      //       <Client>InfoWeb</Client>
-      //    </LinesRequest>
-      // </GetBusTimes>
 
 
 
