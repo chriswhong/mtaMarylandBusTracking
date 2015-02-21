@@ -106,7 +106,7 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
             'route_name': stop.LineName,
             'direction_name': stop.DirectionName,
             'route_id': parseInt(stop.LineDirId.toString().slice(0,-1)),
-            'stop_time': moment().startOf('day').add(stop.ETime,'seconds').format(), //if between midnight and 4:59 am, need to roll back to previous day's start?
+            'stop_time': moment().zone(300).startOf('day').add(stop.ETime,'seconds').format(), //if between midnight and 4:59 am, need to roll back to previous day's start?
             'realtime' : realTimeStatus(stop)
           }
 
@@ -144,7 +144,7 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
 
 
 
-        } else { res.send('no buses for this stop')}
+        } else { res.send('no buses for this stop ')}
       });
 
 
