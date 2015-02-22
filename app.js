@@ -94,7 +94,7 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
 
         body = JSON.parse(body);
 
-        if(body.result[0].StopTimeResult[0].StopTimes.length>0) {
+        if(body.result[0].StopTimeResult[0].StopTimes) {
 
         var stops = body.result[0].StopTimeResult[0].StopTimes;
 
