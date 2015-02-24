@@ -1,1 +1,761 @@
 Stop Info Notes
+
+To get Data about a stop
+
+POST to http://mybustracker.mta.maryland.gov/InfoWeb
+
+With this payload:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+      <GetBusTimes>
+         <LinesRequest>
+            <StopId>103</StopId>
+            <Radius>0</Radius>
+            <GetStopTimes>1</GetStopTimes>
+            <Date tcftype="1e0210">02-20-2015</Date>
+            <NumStopTimes>20</NumStopTimes>
+            <GetStopTripInfo>1</GetStopTripInfo>
+            <SuppressLinesUnloadOnly>1</SuppressLinesUnloadOnly>
+            <FromTime tcftype="140010">10:44a</FromTime>
+            <ToTime tcftype="140010">4:59a</ToTime>
+            <Client>InfoWeb</Client>
+         </LinesRequest>
+      </GetBusTimes>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+Mine:
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+      <GetBusTimes>
+         <LinesRequest>
+            <StopId>103</StopId>
+            <Radius>0</Radius>
+            <GetStopTimes>1</GetStopTimes>
+            <Date>02-20-2015</Date>
+            <NumStopTimes>20</NumStopTimes>
+            <GetStopTripInfo>1</GetStopTripInfo>
+            <SuppressLinesUnloadOnly>1</SuppressLinesUnloadOnly>
+            <FromTime>10:44a</FromTime>
+            <ToTime>4:59a</ToTime>
+            <Client>InfoWeb</Client>
+         </LinesRequest>
+      </GetBusTimes>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+and you will get back:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:enc="http://www.w3.org/2001/06/soap-encoding" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+      <GetBusTimesResponse rowsetMode="rowset">
+         <StopTimeResult rowsetMode="rowset" name="GetLinesAtStop">
+            <Lines arrayType="RowsetRow[1]" rowsetMode="rowset">
+               <Line>
+                  <LineDirId>70841</LineDirId>
+                  <StopId>103</StopId>
+                  <StopName cattr="sqlprecision=&quot;75&quot;">FORT AVE &amp; ARMOUR ST W/B</StopName>
+                  <StopAbbr cattr="sqlprecision=&quot;12&quot;">C005</StopAbbr>
+                  <IvrNum />
+                  <DirectionName cattr="sqlprecision=&quot;15&quot;">NORTHBOUND</DirectionName>
+                  <LineDirIdConst>7411</LineDirIdConst>
+                  <LineName cattr="sqlprecision=&quot;75&quot;">SINAI - FORT McHENRY</LineName>
+                  <LineAbbr cattr="sqlprecision=&quot;7&quot;">001</LineAbbr>
+                  <LineClusterAbbr cattr="sqlprecision=&quot;16&quot;" />
+                  <ClusterDescription cattr="sqlprecision=&quot;0&quot;" />
+                  <LineIdConst>741</LineIdConst>
+                  <ML_AccessibilityMask>1</ML_AccessibilityMask>
+                  <TransportationModeId>0</TransportationModeId>
+                  <TransportationModeAbbr>Fixed</TransportationModeAbbr>
+                  <TransportationModeDescr>Fixed Route Bus</TransportationModeDescr>
+                  <NumericalLineAbbr>1</NumericalLineAbbr>
+                  <NoService>0</NoService>
+                  <AgencyId>1</AgencyId>
+                  <AgencyAbbr />
+                  <AgencyName />
+               </Line>
+            </Lines>
+            <StopTimes arrayType="RowsetRow[2]" rowsetMode="rowset">
+               <StopTime>
+                  <ETime>39819</ETime>
+                  <ETimeSPC>1134</ETimeSPC>
+                  <Date>20150220</Date>
+                  <ETimeUnadjusted>39819</ETimeUnadjusted>
+                  <BayNum>0</BayNum>
+                  <DateUnadjusted>20150220</DateUnadjusted>
+                  <TripId>1461336</TripId>
+                  <BlockId>249284</BlockId>
+                  <BlockNum>1001</BlockNum>
+                  <LineGroup>7328</LineGroup>
+                  <ServiceGroupId>1</ServiceGroupId>
+                  <StopFlag>0</StopFlag>
+                  <StopTimesIndex>2</StopTimesIndex>
+                  <DestinationSign>1 SINAI HOSPITAL</DestinationSign>
+                  <LastTripOfDayLineDir>No</LastTripOfDayLineDir>
+                  <LastTripOfDayPattern>No</LastTripOfDayPattern>
+                  <SignId>91</SignId>
+                  <LineDirId>70841</LineDirId>
+                  <PatternId>80201</PatternId>
+                  <OriginalStopTime />
+                  <ServiceAdjustmentType />
+                  <ServiceAdjustmentDetail rowsetMode="rowset" />
+                  <StopNum>7</StopNum>
+                  <IvrNum>0</IvrNum>
+                  <NodeId>0</NodeId>
+                  <NodeName />
+                  <StopName>FORT AVE &amp; ARMOUR ST W/B</StopName>
+                  <StopAbbr>C005</StopAbbr>
+                  <LineName>SINAI - FORT McHENRY</LineName>
+                  <LineAbbr>001</LineAbbr>
+                  <DirectionName>NORTHBOUND</DirectionName>
+                  <StopId>103</StopId>
+               </StopTime>
+               <StopTime>
+                  <ETime>41919</ETime>
+                  <ETimeSPC>3234</ETimeSPC>
+                  <Date>20150220</Date>
+                  <ETimeUnadjusted>41919</ETimeUnadjusted>
+                  <BayNum>0</BayNum>
+                  <DateUnadjusted>20150220</DateUnadjusted>
+                  <TripId>1461337</TripId>
+                  <BlockId>249291</BlockId>
+                  <BlockNum>1002</BlockNum>
+                  <LineGroup>7328</LineGroup>
+                  <ServiceGroupId>1</ServiceGroupId>
+                  <StopFlag>0</StopFlag>
+                  <StopTimesIndex>3</StopTimesIndex>
+                  <DestinationSign>1 SINAI HOSPITAL</DestinationSign>
+                  <LastTripOfDayLineDir>No</LastTripOfDayLineDir>
+                  <LastTripOfDayPattern>No</LastTripOfDayPattern>
+                  <SignId>91</SignId>
+                  <LineDirId>70841</LineDirId>
+                  <PatternId>80201</PatternId>
+                  <OriginalStopTime />
+                  <ServiceAdjustmentType />
+                  <ServiceAdjustmentDetail rowsetMode="rowset" />
+                  <StopNum>7</StopNum>
+                  <IvrNum>0</IvrNum>
+                  <NodeId>0</NodeId>
+                  <NodeName />
+                  <StopName>FORT AVE &amp; ARMOUR ST W/B</StopName>
+                  <StopAbbr>C005</StopAbbr>
+                  <LineName>SINAI - FORT McHENRY</LineName>
+                  <LineAbbr>001</LineAbbr>
+                  <DirectionName>NORTHBOUND</DirectionName>
+                  <StopId>103</StopId>
+               </StopTime>
+            </StopTimes>
+            <ServiceResumesTimes rowsetMode="rowset" />
+            <Validation arrayType="RowsetRow[11]" rowsetMode="rowset" name="Validation">
+               <Item>
+                  <Name>Service</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>CONTEXTOK</Code>
+                  <Message>Context successfully found for date 20150220:  SignUp=91, ServiceGroup=1 [ExcCombo=-1]</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Service</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>CONTEXTOK</Code>
+                  <Message>Context successfully found for date 20150220:  SignUp=91, ServiceGroup=1 [ExcCombo=-1]</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Service</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>CONTEXTOK</Code>
+                  <Message>Context successfully found for date 20150220:  SignUp=91, ServiceGroup=1 [ExcCombo=-1]</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Request</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>TR</Code>
+                  <Message>46 stop times were found</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Request</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>QH</Code>
+                  <Message>14 historical times were suppressed</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Request</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>QX</Code>
+                  <Message>29 excess times were suppressed</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Request</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>QE</Code>
+                  <Message>0 empty times were suppressed</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Request</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>QV</Code>
+                  <Message>0 previously viewed times were suppressed</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Request</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>QU</Code>
+                  <Message>0 unload-only times were suppressed</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Request</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>ST</Code>
+                  <Message>3 stop times were reported</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+               <Item>
+                  <Name>Request</Name>
+                  <Instance>1</Instance>
+                  <Type>message</Type>
+                  <Code>RS</Code>
+                  <Message>1 solutions were found for the request</Message>
+                  <Action>none</Action>
+                  <Tag />
+                  <Extra rowsetMode="rowset" />
+               </Item>
+            </Validation>
+         </StopTimeResult>
+         <TripResult rowsetMode="rowset">
+            <Trips rowsetMode="rowset" name="Search">
+               <Results rowsetMode="rowset">
+                  <BlockId>249287</BlockId>
+                  <TripId>0</TripId>
+                  <LastUpdateDate>20150220</LastUpdateDate>
+                  <LastUpdateTime>38561</LastUpdateTime>
+                  <DeviceId>5014</DeviceId>
+                  <EstimatedScheduleAdherence>-180</EstimatedScheduleAdherence>
+                  <Lat>39288000</Lat>
+                  <Lon>-76615000</Lon>
+                  <MeasuredScheduleAdherence />
+                  <LastTimingPointId>2784</LastTimingPointId>
+                  <LastTimingPointName cattr="sqlprecision=&quot;256&quot;">CHARLES &amp; PRATT N/B</LastTimingPointName>
+                  <LastTimingPointScheduleTime />
+                  <LastStopName cattr="sqlprecision=&quot;60&quot;">NULL</LastStopName>
+                  <LastStopScheduleTime />
+                  <VehicleNumber cattr="sqlprecision=&quot;10&quot;" />
+                  <LastUpdateThreshold />
+                  <AdherenceThreshold />
+                  <ScheduleTime />
+                  <CurrentTime>38685</CurrentTime>
+                  <CurrentDate>20150220</CurrentDate>
+                  <ForeCastThreshold>0</ForeCastThreshold>
+                  <LookupHints />
+               </Results>
+               <Validation rowsetMode="rowset" />
+            </Trips>
+            <Trips rowsetMode="rowset" name="Search">
+               <Results rowsetMode="rowset">
+                  <BlockId>249284</BlockId>
+                  <TripId>0</TripId>
+                  <LastUpdateDate>20150220</LastUpdateDate>
+                  <LastUpdateTime>38592</LastUpdateTime>
+                  <DeviceId>6003</DeviceId>
+                  <EstimatedScheduleAdherence>-9999</EstimatedScheduleAdherence>
+                  <Lat>39289000</Lat>
+                  <Lon>-76614000</Lon>
+                  <MeasuredScheduleAdherence />
+                  <LastTimingPointId>0</LastTimingPointId>
+                  <LastTimingPointName cattr="sqlprecision=&quot;256&quot;">NULL</LastTimingPointName>
+                  <LastTimingPointScheduleTime />
+                  <LastStopName cattr="sqlprecision=&quot;60&quot;">NULL</LastStopName>
+                  <LastStopScheduleTime />
+                  <VehicleNumber cattr="sqlprecision=&quot;10&quot;" />
+                  <LastUpdateThreshold />
+                  <AdherenceThreshold>1</AdherenceThreshold>
+                  <ScheduleTime />
+                  <CurrentTime>38685</CurrentTime>
+                  <CurrentDate>20150220</CurrentDate>
+                  <ForeCastThreshold>0</ForeCastThreshold>
+                  <LookupHints />
+               </Results>
+               <Validation rowsetMode="rowset" />
+            </Trips>
+            <Trips rowsetMode="rowset" name="Search">
+               <Results arrayType="RowsetRow[2]" rowsetMode="rowset">
+                  <_row_>
+                     <BlockId>249291</BlockId>
+                     <TripId>0</TripId>
+                     <LastUpdateDate>20150220</LastUpdateDate>
+                     <LastUpdateTime>38654</LastUpdateTime>
+                     <DeviceId>1014</DeviceId>
+                     <EstimatedScheduleAdherence>0</EstimatedScheduleAdherence>
+                     <Lat>39290000</Lat>
+                     <Lon>-76640000</Lon>
+                     <MeasuredScheduleAdherence />
+                     <LastTimingPointId>0</LastTimingPointId>
+                     <LastTimingPointName cattr="sqlprecision=&quot;256&quot;">NULL</LastTimingPointName>
+                     <LastTimingPointScheduleTime />
+                     <LastStopName cattr="sqlprecision=&quot;60&quot;">NULL</LastStopName>
+                     <LastStopScheduleTime />
+                     <VehicleNumber cattr="sqlprecision=&quot;10&quot;">10002</VehicleNumber>
+                     <LastUpdateThreshold />
+                     <AdherenceThreshold />
+                     <ScheduleTime />
+                     <CurrentTime>38685</CurrentTime>
+                     <CurrentDate>20150220</CurrentDate>
+                     <ForeCastThreshold>0</ForeCastThreshold>
+                     <LookupHints />
+                  </_row_>
+                  <_row_>
+                     <BlockId>249291</BlockId>
+                     <TripId>0</TripId>
+                     <LastUpdateDate>20150219</LastUpdateDate>
+                     <LastUpdateTime>70284</LastUpdateTime>
+                     <DeviceId>9070</DeviceId>
+                     <EstimatedScheduleAdherence>-9999</EstimatedScheduleAdherence>
+                     <Lat>39275000</Lat>
+                     <Lon>-76639000</Lon>
+                     <MeasuredScheduleAdherence />
+                     <LastTimingPointId>0</LastTimingPointId>
+                     <LastTimingPointName>NULL</LastTimingPointName>
+                     <LastTimingPointScheduleTime />
+                     <LastStopName>NULL</LastStopName>
+                     <LastStopScheduleTime />
+                     <VehicleNumber />
+                     <LastUpdateThreshold>1</LastUpdateThreshold>
+                     <AdherenceThreshold>1</AdherenceThreshold>
+                     <ScheduleTime />
+                     <CurrentTime>38685</CurrentTime>
+                     <CurrentDate>20150220</CurrentDate>
+                     <ForeCastThreshold>0</ForeCastThreshold>
+                     <LookupHints />
+                  </_row_>
+               </Results>
+               <Validation rowsetMode="rowset" />
+            </Trips>
+         </TripResult>
+         <RealTimeResults arrayType="RowsetRow[3]" rowsetMode="rowset">
+            <RealTimeResult>
+               <RealTime>39819</RealTime>
+               <RealTimeSPC>1134</RealTimeSPC>
+               <RealTimeMPC>18</RealTimeMPC>
+               <ETime>39819</ETime>
+               <ETimeSPC>1134</ETimeSPC>
+               <StopId>103</StopId>
+               <StopClusterId />
+               <TripId>1461336</TripId>
+               <BlockId>249284</BlockId>
+               <BayNum>0</BayNum>
+               <EstimatedScheduleAdherence>-9999</EstimatedScheduleAdherence>
+               <LastTimingPointId>0</LastTimingPointId>
+               <LastTimingPointName>NULL</LastTimingPointName>
+               <LastTimingPointScheduleTime />
+               <LastUpdateThreshold>0</LastUpdateThreshold>
+               <AdherenceThreshold>1</AdherenceThreshold>
+               <IgnoreAdherence>1</IgnoreAdherence>
+               <LineDirId>70841</LineDirId>
+               <Lon>-76614000</Lon>
+               <Lat>39289000</Lat>
+               <VehicleNumber />
+               <RealTimeExtraBusEnabled>1</RealTimeExtraBusEnabled>
+               <NumberOfResults>3</NumberOfResults>
+            </RealTimeResult>
+            <RealTimeResult>
+               <RealTime>41919</RealTime>
+               <RealTimeSPC>3234</RealTimeSPC>
+               <RealTimeMPC>53</RealTimeMPC>
+               <ETime>41919</ETime>
+               <ETimeSPC>3234</ETimeSPC>
+               <StopId>103</StopId>
+               <StopClusterId />
+               <TripId>1461337</TripId>
+               <BlockId>249291</BlockId>
+               <BayNum>0</BayNum>
+               <EstimatedScheduleAdherence>0</EstimatedScheduleAdherence>
+               <LastTimingPointId>0</LastTimingPointId>
+               <LastTimingPointName>NULL</LastTimingPointName>
+               <LastTimingPointScheduleTime />
+               <LastUpdateThreshold>0</LastUpdateThreshold>
+               <AdherenceThreshold>0</AdherenceThreshold>
+               <IgnoreAdherence>0</IgnoreAdherence>
+               <LineDirId>70841</LineDirId>
+               <Lon>-76640000</Lon>
+               <Lat>39290000</Lat>
+               <VehicleNumber>10002</VehicleNumber>
+               <RealTimeExtraBusEnabled>1</RealTimeExtraBusEnabled>
+               <NumberOfResults />
+            </RealTimeResult>
+            <RealTimeResult>
+               <RealTime>41919</RealTime>
+               <RealTimeSPC>3234</RealTimeSPC>
+               <RealTimeMPC>53</RealTimeMPC>
+               <ETime>41919</ETime>
+               <ETimeSPC>3234</ETimeSPC>
+               <StopId>103</StopId>
+               <StopClusterId />
+               <TripId>1461337</TripId>
+               <BlockId>249291</BlockId>
+               <BayNum>0</BayNum>
+               <EstimatedScheduleAdherence>-9999</EstimatedScheduleAdherence>
+               <LastTimingPointId>0</LastTimingPointId>
+               <LastTimingPointName>NULL</LastTimingPointName>
+               <LastTimingPointScheduleTime />
+               <LastUpdateThreshold>1</LastUpdateThreshold>
+               <AdherenceThreshold>1</AdherenceThreshold>
+               <IgnoreAdherence>1</IgnoreAdherence>
+               <LineDirId>70841</LineDirId>
+               <Lon>-76639000</Lon>
+               <Lat>39275000</Lat>
+               <VehicleNumber />
+               <RealTimeExtraBusEnabled>1</RealTimeExtraBusEnabled>
+               <NumberOfResults />
+            </RealTimeResult>
+         </RealTimeResults>
+         <BusTimeStatus>-3</BusTimeStatus>
+         <BusTimeCount>0</BusTimeCount>
+         <BusTimeSummary />
+         <SystemTime>10:44a</SystemTime>
+      </GetBusTimesResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+UGH.  Forget all of that
+
+POST to http://realtimemap.mta.maryland.gov/InfoWeb
+
+with payload:
+
+{  
+   "version":"1.1",
+   "method":"GetBusTimes",
+   "params":{  
+      "stopId":1260,
+      "Radius":-1,
+      "NumTimesPerLine":5,
+      "NumStopTimes":20
+   }
+}
+
+and get response:
+
+{  
+   "version":"1.1",
+   "result":[  
+      {  
+         "StopTimeResult":[  
+            {  
+               "Lines":[  
+                  {  
+                     "LineDirId":70880,
+                     "StopId":1260,
+                     "StopName":"GREENE & BALTIMORE S\/B",
+                     "StopAbbr":"K906",
+                     "DirectionName":"SOUTHBOUND  ",
+                     "LineDirIdConst":7440,
+                     "LineName":"MONDAWMIN - CANTON              ",
+                     "LineAbbr":"007",
+                     "LineClusterAbbr":"",
+                     "LineIdConst":744,
+                     "ML_AccessibilityMask":1,
+                     "TransportationModeId":0,
+                     "TransportationModeAbbr":"Fixed",
+                     "TransportationModeDescr":"Fixed Route Bus",
+                     "NumericalLineAbbr":7,
+                     "NoService":false,
+                     "AgencyId":1,
+                     "AgencyAbbr":"",
+                     "AgencyName":""
+                  }
+               ],
+               "StopTimes":[  
+                  {  
+                     "ETime":86809,
+                     "ETimeSPC":459,
+                     "Date":20150220,
+                     "ETimeUnadjusted":86809,
+                     "BayNum":0,
+                     "DateUnadjusted":20150220,
+                     "TripId":1462375,
+                     "BlockId":249475,
+                     "BlockNum":4108,
+                     "LineGroup":7340,
+                     "ServiceGroupId":1,
+                     "StopFlag":0,
+                     "StopTimesIndex":1,
+                     "DestinationSign":"7 CANTON",
+                     "LastTripOfDayLineDir":"No",
+                     "LastTripOfDayPattern":"Yes",
+                     "SignId":91,
+                     "LineDirId":70880,
+                     "PatternId":80242,
+                     "StopNum":196,
+                     "IvrNum":0,
+                     "NodeId":0,
+                     "NodeName":"",
+                     "StopName":"GREENE & BALTIMORE S\/B",
+                     "StopAbbr":"K906",
+                     "LineName":"MONDAWMIN - CANTON              ",
+                     "LineAbbr":"007",
+                     "DirectionName":"SOUTHBOUND  ",
+                     "StopId":"1260"
+                  },
+                  {  
+                     "ETime":90469,
+                     "ETimeSPC":4119,
+                     "Date":20150220,
+                     "ETimeUnadjusted":90469,
+                     "BayNum":0,
+                     "DateUnadjusted":20150220,
+                     "TripId":1462376,
+                     "BlockId":249476,
+                     "BlockNum":4657,
+                     "LineGroup":7375,
+                     "ServiceGroupId":1,
+                     "StopFlag":0,
+                     "StopTimesIndex":2,
+                     "DestinationSign":"7 FAIT & LINWOOD",
+                     "LastTripOfDayLineDir":"No",
+                     "LastTripOfDayPattern":"No",
+                     "SignId":91,
+                     "LineDirId":70880,
+                     "PatternId":80245,
+                     "StopNum":196,
+                     "IvrNum":0,
+                     "NodeId":0,
+                     "NodeName":"",
+                     "StopName":"GREENE & BALTIMORE S\/B",
+                     "StopAbbr":"K906",
+                     "LineName":"MONDAWMIN - CANTON              ",
+                     "LineAbbr":"007",
+                     "DirectionName":"SOUTHBOUND  ",
+                     "StopId":"1260"
+                  }
+               ],
+               "ServiceResumesTimes":[  
+
+               ],
+               "Validation":[  
+                  {  
+                     "Name":"Service",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"CONTEXTOK",
+                     "Message":"Context successfully found for date 20150220:  SignUp=91, ServiceGroup=1 [ExcCombo=-1]",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Service",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"CONTEXTOK",
+                     "Message":"Context successfully found for date 20150220:  SignUp=91, ServiceGroup=1 [ExcCombo=-1]",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Service",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"CONTEXTOK",
+                     "Message":"Context successfully found for date 20150220:  SignUp=91, ServiceGroup=1 [ExcCombo=-1]",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Request",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"TR",
+                     "Message":"34 stop times were found",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Request",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"QH",
+                     "Message":"32 historical times were suppressed",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Request",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"QX",
+                     "Message":"0 excess times were suppressed",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Request",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"QE",
+                     "Message":"0 empty times were suppressed",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Request",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"QV",
+                     "Message":"0 previously viewed times were suppressed",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Request",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"QU",
+                     "Message":"0 unload-only times were suppressed",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Request",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"ST",
+                     "Message":"2 stop times were reported",
+                     "Action":"none"
+                  },
+                  {  
+                     "Name":"Request",
+                     "Instance":1,
+                     "Type":"message",
+                     "Code":"RS",
+                     "Message":"1 solutions were found for the request",
+                     "Action":"none"
+                  }
+               ]
+            }
+         ],
+         "TripResult":[  
+            {  
+               "Trips":[  
+                  {  
+                     "Results":[  
+
+                     ],
+                     "Validation":[  
+
+                     ]
+                  }
+               ]
+            },
+            {  
+               "Trips":[  
+                  {  
+                     "Results":[  
+                        {  
+                           "BlockId":249476,
+                           "TripId":0,
+                           "LastUpdateDate":20150220,
+                           "LastUpdateTime":86293,
+                           "DeviceId":4122,
+                           "EstimatedScheduleAdherence":180,
+                           "Lat":39373000,
+                           "Lon":-76742000,
+                           "LastTimingPointId":2933,
+                           "LastTimingPointName":"NULL",
+                           "LastStopName":"NULL",
+                           "CurrentTime":86350,
+                           "CurrentDate":20150220,
+                           "ForeCastThreshold":10
+                        }
+                     ],
+                     "Validation":[  
+
+                     ]
+                  }
+               ]
+            }
+         ],
+         "RealTimeResults":[  
+            {  
+               "RealTime":86809,
+               "RealTimeSPC":459,
+               "RealTimeMPC":7,
+               "ETime":86809,
+               "ETimeSPC":459,
+               "StopId":1260,
+               "TripId":1462375,
+               "BlockId":0,
+               "BayNum":0,
+               "EstimatedScheduleAdherence":0,
+               "LastTimingPointId":0,
+               "LastTimingPointName":"",
+               "LastUpdateThreshold":false,
+               "AdherenceThreshold":false,
+               "IgnoreAdherence":false,
+               "LineDirId":70880,
+               "Lon":0,
+               "Lat":0,
+               "VehicleNumber":"",
+               "RealTimeExtraBusEnabled":false,
+               "NumberOfResults":2
+            },
+            {  
+               "RealTime":90469,
+               "RealTimeSPC":4119,
+               "RealTimeMPC":68,
+               "ETime":90469,
+               "ETimeSPC":4119,
+               "StopId":1260,
+               "TripId":1462376,
+               "BlockId":249476,
+               "BayNum":0,
+               "EstimatedScheduleAdherence":180,
+               "LastTimingPointId":2933,
+               "LastTimingPointName":"NULL",
+               "LastUpdateThreshold":false,
+               "AdherenceThreshold":false,
+               "IgnoreAdherence":true,
+               "LineDirId":70880,
+               "Lon":-76742000,
+               "Lat":39373000,
+               "VehicleNumber":"",
+               "RealTimeExtraBusEnabled":false
+            }
+         ],
+         "BusTimeStatus":-3,
+         "BusTimeCount":0,
+         "BusTimeSummary":"",
+         "SystemTime":"11:59p"
+      }
+   ]
+}

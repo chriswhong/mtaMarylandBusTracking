@@ -96,7 +96,7 @@
         var stop_id = $('#searchBox').val();
         
 
-        $.getJSON('/bustimes/' + stop_id, function(data){
+        $.getJSON('/stoptimes/' + stop_id, function(data){
 
           $('#stopId').text(stop_id);
           $('#stopName').text(data.stop_name);

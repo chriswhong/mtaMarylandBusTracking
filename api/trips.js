@@ -405,6 +405,7 @@ Trips.prototype.getCurrentFromMTA = function(cb) {
 		url: 'http://realtimemap.mta.maryland.gov/RealTimeManager',
 		body: JSON.stringify(ME.payloadString)
 	}, function(error, response, body) {
+		console.log("From MTA: " + body);
 		var data = JSON.parse(body);
 		cb(data);
 		data.reqTime = new Date();
