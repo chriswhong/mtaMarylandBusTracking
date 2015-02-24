@@ -3,9 +3,12 @@ var fs = require("fs");
 var source = require('./local.json');
 
 
-var stream = fs.createReadStream(__dirname + '/data/routes.txt');
+var stream = fs.createReadStream(__dirname + '/routes.txt');
 
 routes = [];
+
+//read each line of routes.txt, push each to routes[],
+
 
 csv
  .fromStream(stream, {headers : true})
@@ -17,25 +20,32 @@ csv
     var p = feature.properties;
     delete p.OBJECTID;
 
-    p.color = lookupColor(p.Route_ID);
-
+    var newData = lookupColor(p.Route_Numb);
+    p.Route_ID = newData.route_id;
+    p.color = newData.color;
 
     feature.properties = p;
+
+    console.log(feature);
 
 
   });
 
-  fs.writeFile(__dirname + '/public/data/localRoutesCleaned.geojson', JSON.stringify(source));
+  fs.writeFile(__dirname + '/localRoutesCleaned.geojson', JSON.stringify(source));
 
  });
 
 
-function lookupColor(route_id) {
-  console.log(route_id);
+function lookupColor(route_numb) {
+  console.log(route_numb);
   for(var i=0; i<routes.length; i++) {
-    if(routes[i].route_id == route_id) {
-      console.log("Found a match for route_id " + route_id);
-      return routes[i].route_color;
+    if(routes[i].route_short_name == route_numb) {
+      console.log("Found a match for route number " + route_numb);
+      var newData = {
+        'color':routes[i].route_color,
+        'route_id':routes[i].route_id
+      }
+      return newData;
     }
   }
 }
