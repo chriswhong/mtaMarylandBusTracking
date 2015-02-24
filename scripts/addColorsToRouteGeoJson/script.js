@@ -3,7 +3,7 @@ var fs = require("fs");
 var source = require('./local.json');
 
 
-var stream = fs.createReadStream("routes.txt");
+var stream = fs.createReadStream(__dirname + '/data/routes.txt');
 
 routes = [];
 
@@ -25,7 +25,7 @@ csv
 
   });
 
-  fs.writeFile('./localRoutesCleaned.geojson', JSON.stringify(source));
+  fs.writeFile(__dirname + '/public/data/localRoutesCleaned.geojson', JSON.stringify(source));
 
  });
 

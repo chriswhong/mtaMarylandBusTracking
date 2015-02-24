@@ -1,0 +1,60 @@
+FORMAT: 1A
+HOST: http://mtabustrack.herokuapp.com
+
+# MTA Real-time API
+MTA Real-time API is a consumer-friendly proxy API built on the services that feed the MTA's [real-time bus tracking App.](http://mybustracker.mta.maryland.gov/)
+
+## Stoptimes [/stoptimes/{stop_id}]
+### Get upcoming arrival times for a Stop  [GET]
++ Parameters
+    + stop_id (number) ... ID of the stop number you want arrival times for.
+
++ Response 200 (application/json)
+
+        {  
+          "stop_id":"67",
+          "stop_name":"BALTIMORE ST & LIGHT MB E/B",
+          "stop_times":[  
+            {  
+              "route_number":"010",
+              "route_name":"RT. 40/ROLLING - BULLNECK RD.",
+              "direction_name":"EASTBOUND",
+              "route_id":7386,
+              "stop_time":"2015-02-23T09:37:00-05:00",
+              "realtime":true
+            },
+            {  
+              "route_number":"020",
+              "route_name":"SECURITY/EDMONDSON - CITY HALL",
+              "direction_name":"EASTBOUND",
+              "route_id":7505,
+              "stop_time":"2015-02-23T09:42:54-05:00",
+              "realtime":true
+            },
+            {  
+              "route_number":"091",
+              "route_name":"SINAI HOSPITAL - DOWNTOWN       ",
+              "direction_name":"EASTBOUND   ",
+              "route_id":7429,
+              "stop_time":"2015-02-23T09:44:48-05:00",
+              "realtime":false
+            },
+            {  
+              "route_number":"036",
+              "route_name":"NORTHERN PKWY & YORK - RIVERVIEW",
+              "direction_name":"NORTHBOUND",
+              "route_id":7503,
+              "stop_time":"2015-02-23T09:46:45-05:00",
+              "realtime":false
+            },
+            {  
+              "route_number":"005",
+              "route_name":"MONDAWMIN - CEDONIA             ",
+              "direction_name":"EASTBOUND   ",
+              "route_id":7382,
+              "stop_time":"2015-02-23T09:49:49-05:00",
+              "realtime":true
+            }
+          ],
+          "timestamp":"2015-02-23T09:43:23-05:00"
+        }

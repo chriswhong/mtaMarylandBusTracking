@@ -9,13 +9,33 @@ var express = require('express'),
 
 var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/mtamdbustrack';
 
-fs.readFile(__dirname + '/data/allRoutes.json', {
+fs.readFile(__dirname + '/data/routes.txt', {
   encoding: 'UTF-8'
 }, function read(err, data) {
   if (err) {
     console.log('Could not load route file', err);
     return;
   }
+
+  // low brow CSV parsing
+  var routes = [],
+    dataRows = data.split('\n');
+
+  dataRows.forEach(function(row) {
+    var rowData = row.split(',');
+    if (parseInt(rowData[0],10) !== NaN) {
+      routes.push({
+        lineDirId: rowData[0] + '0',
+        number: rowData[2],
+        name: rowData[3]
+      });
+      routes.push({
+        lineDirId: rowData[0] + '1',
+        number: rowData[2],
+        name: rowData[3]
+      });
+    }
+  });
 
   mongo.Db.connect(mongoUri, {
     auto_reconnect: true
@@ -38,7 +58,7 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
 
     app.get('/trips', function(req, res) {
       var trips = new Trips({
-        allRoutes: JSON.parse(data),
+        allRoutes: routes,
         db: db,
         cacheLatency: 30
       });
@@ -47,7 +67,7 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
 
     app.get('/save', function(req, res) {
       var trips = new Trips({
-        allRoutes: JSON.parse(data),
+        allRoutes: routes,
         db: db,
         cacheLatency: 30
       });
@@ -56,7 +76,7 @@ fs.readFile(__dirname + '/data/allRoutes.json', {
 
     app.get('/history/:route_id', function(req, res) {
       var trips = new Trips({
-        allRoutes: JSON.parse(data),
+        allRoutes: routes,
         db: db,
         cacheLatency: 30
       });
