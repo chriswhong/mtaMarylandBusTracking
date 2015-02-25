@@ -25,6 +25,7 @@ Trips.prototype.logData = function(req, res) {
 	var ME = this;
 	console.log("Logging Data!");
 	ME.getCurrentFromMTAForSave(function(data) {
+		console.log(data);
 		response = ME.cleanDataForSave(data);
 
 		console.log(response);
@@ -117,6 +118,9 @@ Trips.prototype.getHistory = function(req, res) {
 
 Trips.prototype.getCurrentFromMTAForSave = function(cb) {
 	var ME = this;
+
+	console.log(ME.payloadString.params.travelPointsReqs);
+
 	request.post({
 		headers: {
 			'content-type': 'application/json'
@@ -124,6 +128,7 @@ Trips.prototype.getCurrentFromMTAForSave = function(cb) {
 		url: 'http://realtimemap.mta.maryland.gov/RealTimeManager',
 		body: JSON.stringify(ME.payloadString)
 	}, function(error, response, body) {
+		console.log(body);
 		var data = JSON.parse(body);
 		cb(data);
 		//data.reqTime = new Date();
@@ -203,8 +208,10 @@ Trips.prototype.cleanData = function(rawData) {
 
 Trips.prototype.cleanDataForSave = function(rawData) {
 
+	console.log(rawData);
+
 	var ME = this,
-		cleanData = []
+		cleanData = [];
 
 	rawData.result.travelPoints.forEach(function(line) {
 		if (line.EstimatedPoints) {
