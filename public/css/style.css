@@ -29,6 +29,7 @@ html,body {
 	width: 285px;
 	padding: 0 21px;
 	font-size: 14px;
+  display:none;
 }
 
 #FilterBox {
@@ -119,4 +120,50 @@ a,a:visited {
   width: 325px;
   padding: 14px;
   font-size: 20px;
+}
+
+#chartBox {
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  width: 800px;
+  padding: 0;
+}
+
+/*Chart*/ 
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+/*.x.axis path {
+  display: none;
+}*/
+
+.axis {
+  fill: #fff;
+  font-size: 12px;
+}
+
+.line {
+fill: none;
+  stroke: rgb(255, 193, 55);
+  stroke-width: 3.5px;
+  stroke-opacity: .9;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: #F4FF5D;
+}
+
+.focus text {
+  fill:#fff;
 }
