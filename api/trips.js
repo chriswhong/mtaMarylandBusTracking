@@ -1,5 +1,6 @@
 var request = require('request'),
-	moment = require('moment');
+	moment = require('moment'),
+	csv = require('csv');
 
 moment().format();
 
@@ -67,6 +68,109 @@ Trips.prototype.getCurrent = function(req, res) {
 	});
 };
 
+Trips.prototype.export = function(req,res) {
+	var ME = this;
+	var route_id = req.params.route_id;
+
+	var query = { 
+		'lineId': parseInt(route_id)
+	}
+
+	console.log(query);
+
+	this.logs.find(query).toArray(function(err, results) {
+		console.log(results);
+		if (err) {
+			//cb(false);
+		}
+
+		var result = [];
+
+    res.contentType('csv');
+
+    csv()
+    .from(result)
+    .on('data', function(data){ 
+        result.push(data.join());
+    })
+    .on('end', function(){
+        res.send(result.join('\n'));
+    });
+
+		// res.json({
+		// 		data: results
+		// });
+	});
+
+
+};
+
+//This endpoint serves up a count of real-time vehicles reporting during a given minute 
+//over the last 24 hours
+Trips.prototype.getGlobalHistory = function(req, res) {
+	var ME = this;
+	var route_id = req.params.route_id;
+
+
+	var oneDayAgo = moment().subtract(24, 'hours');
+	
+	console.log(oneDayAgo.format());
+
+	this.logs.aggregate([
+	{  
+    $match:{  
+      timestamp:{  
+        $gt:oneDayAgo.toDate()
+      }
+    }
+  },  
+  {  
+    $group:{  
+      _id:{  
+        year:{  
+          $year:"$timestamp"
+        },
+        month:{  
+          $month:"$timestamp"
+        },
+        day:{  
+          $dayOfMonth:"$timestamp"
+        },
+        hour:{  
+          $hour:"$timestamp"
+        },
+        minute:{  
+          $minute:"$timestamp"
+        }
+      },
+      count:{  
+        $sum:1
+      }
+    }
+  }
+],function (err, results){
+
+		
+
+		//format the results, combine the date components into a datestring.  Moment will help
+		results.forEach(function(result) {
+			var t = result._id;
+			var timeString = t.year + "-" + t.month + "-" + t.day + " " + t.hour + ":" + t.minute + " -5:00";
+ 			result.timestamp = moment(timeString,"YYYY-MM-DD HH:mm ZZ").format();
+ 			delete result._id;
+		});
+
+		console.log(results);
+
+		res.json({
+				data: results
+		});
+	});
+
+	
+};
+
+
 Trips.prototype.getHistory = function(req, res) {
 	var ME = this;
 	var route_id = req.params.route_id;
@@ -97,7 +201,7 @@ Trips.prototype.getHistory = function(req, res) {
 
 	this.logs.aggregate([
 	{	
-		$match:{lineId:7084}
+		$match:{lineId:7379}
 			
 	},
 	{
@@ -217,7 +321,7 @@ Trips.prototype.cleanDataForSave = function(rawData) {
 		if (line.EstimatedPoints) {
 			var e = line.EstimatedPoints[0];
 			var vehicle = {
-				timestamp: moment().format(),
+				timestamp: moment().toDate(),
 				location: {
 					lat: e.Lat,
 					lon: e.Lon
@@ -225,7 +329,7 @@ Trips.prototype.cleanDataForSave = function(rawData) {
 				lineId: Math.round(e.LineDirId/10),
 				directionId: (e.LineDirId & 1) ? 1 : 0,
 				tripId: e.TripId,
-				vehicleNumber: line.VehicleNumber
+				vehicleNumber: parseInt(line.VehicleNumber)
 			}
 
 			cleanData.push(vehicle);

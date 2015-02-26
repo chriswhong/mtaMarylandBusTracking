@@ -74,6 +74,15 @@ fs.readFile(__dirname + '/data/routes.txt', {
       trips.logData(req, res);
     });
 
+    app.get('/history', function(req, res) {
+      var trips = new Trips({
+        allRoutes: routes,
+        db: db,
+        cacheLatency: 30
+      });
+      trips.getGlobalHistory(req,res);
+    });
+
     app.get('/history/:route_id', function(req, res) {
       var trips = new Trips({
         allRoutes: routes,
@@ -81,6 +90,16 @@ fs.readFile(__dirname + '/data/routes.txt', {
         cacheLatency: 30
       });
       trips.getHistory(req,res);
+    });
+
+    //export from realtime logs for a given route
+    app.get('/export/:route_id', function(req, res) {
+      var trips = new Trips({
+        allRoutes: routes,
+        db: db,
+        cacheLatency: 30
+      });
+      trips.export(req,res);
     });
 
     //proxy API for getBusTimes
