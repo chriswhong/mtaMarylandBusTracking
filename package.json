@@ -16,7 +16,8 @@
     "request": "^2.53.0",
     "underscore": "latest",
     "unzip2": "^0.2.5",
-    "xml2js": "^0.4.5"
+    "xml2js": "^0.4.5",
+    "csv": "latest"
   },
   "description": "Some civic hacking on the MTA's Real-time Bus Data",
   "main": "app.js",
