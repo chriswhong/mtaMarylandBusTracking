@@ -109,7 +109,7 @@ fs.readFile(__dirname + '/data/routes.txt', {
     });
 
     //proxy API for getBusTimes
-    app.get('/stoptimes/:stop_id', function(req, res) {
+    app.get('/stoptimes/:stop_id', function(req, res, next) {
       getStopTimes(req,res);
     });
 
