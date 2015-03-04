@@ -4,6 +4,58 @@ HOST: http://mtabustrack.herokuapp.com
 # MTA Real-time API
 MTA Real-time API is a consumer-friendly proxy API built on the services that feed the MTA's [real-time bus tracking App.](http://mybustracker.mta.maryland.gov/)
 
+## Vehicles [/vehicles]
+### Get real-time location data for all vehicles [GET]
+
++ Response 200 (application/json)
+
+            {  
+              "data":[  
+                {  
+                  "timestamp":"2015-02-26T20:41:28-05:00",
+                  "location":{  
+                    "lat":39.29086,
+                    "lon":-76.62102
+                  },
+                  "heading":352,
+                  "lineId":7382,
+                  "directionId":1,
+                  "number":"005",
+                  "name":"MONDAWMIN - CEDONIA",
+                  "tripId":1534341,
+                  "vehicleNumber":""
+                },
+                {  
+                  "timestamp":"2015-02-26T20:41:28-05:00",
+                  "location":{  
+                    "lat":39.27673,
+                    "lon":-76.68681
+                  },
+                  "heading":212,
+                  "lineId":7386,
+                  "directionId":1,
+                  "number":"010",
+                  "name":"RT. 40/ROLLING - BULLNECK RD.",
+                  "tripId":1535627,
+                  "vehicleNumber":""
+                },
+                {  
+                  "timestamp":"2015-02-26T20:41:28-05:00",
+                  "location":{  
+                    "lat":39.26937,
+                    "lon":-76.63371
+                  },
+                  "heading":222,
+                  "lineId":7401,
+                  "directionId":0,
+                  "number":"027",
+                  "name":"PLAZA STATION - PORT COVINGTON",
+                  "tripId":1539128,
+                  "vehicleNumber":""
+                }
+              ]
+            }
+
 ## Stoptimes [/stoptimes/{stop_id}]
 ### Get upcoming arrival times for a Stop  [GET]
 + Parameters
