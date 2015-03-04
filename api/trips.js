@@ -1,6 +1,5 @@
 var request = require('request'),
-	moment = require('moment'),
-	csv = require('csv');
+	moment = require('moment');
 
 moment().format();
 
@@ -72,14 +71,16 @@ Trips.prototype.export = function(req,res) {
 	var ME = this;
 	var route_id = req.params.route_id;
 
-	var query = { 
-		'lineId': parseInt(route_id)
-	}
+	// var query = { 
+	// 	'lineId': parseInt(route_id)
+	// }
+
+	var query = {};
 
 	console.log(query);
 
 	this.logs.find(query).toArray(function(err, results) {
-		console.log(results);
+		console.log("Results: " + results.length);
 		if (err) {
 			//cb(false);
 		}
@@ -88,18 +89,20 @@ Trips.prototype.export = function(req,res) {
 
     res.contentType('csv');
 
-    csv()
-    .from(result)
-    .on('data', function(data){ 
-        result.push(data.join());
-    })
-    .on('end', function(){
-        res.send(result.join('\n'));
+    results.forEach(function(row) {
+    	res.write(row.timestamp + ',');
+    	res.write(row.location.lat + ',');
+    	res.write(row.location.lon + ',');
+    	res.write(row.lineId + ',');
+    	res.write(row.directionId + ',');
+    	res.write(row.tripId + ',');
+    	res.write(row.vehicleNumber + ',');
+    	res.write('\n');
+
     });
 
-		// res.json({
-		// 		data: results
-		// });
+    res.end();
+
 	});
 
 

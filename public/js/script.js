@@ -32,7 +32,7 @@ var currentData,
   function getData() {
 
     //use jQuery's getJSON() to call the trips endpoint
-    $.getJSON('/trips', function(resp) {
+    $.getJSON('/vehicles', function(resp) {
 
       currentData = resp.data;
 
