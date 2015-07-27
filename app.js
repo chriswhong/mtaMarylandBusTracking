@@ -45,18 +45,26 @@ fs.readFile(__dirname + '/data/routes.txt', {
 
     var app = express();
 
+    app.use(function(req, res, next) {
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      next();
+    });
+
     app.use(express.static(__dirname + '/public'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
       extended: true
     }));
 
+
+
     var server = app.listen(process.env.PORT || 5000, function() {
       var port = server.address().port;
       console.log("Node app listening on port " + port + "...");
     });
 
-    app.get('/trips', function(req, res) {
+    app.get('/vehicles', function(req, res) {
       var trips = new Trips({
         allRoutes: routes,
         db: db,
