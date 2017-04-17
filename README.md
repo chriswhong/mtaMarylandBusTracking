@@ -1,7 +1,7 @@
 # mtaMarylandBusTracking
 Some civic hacking on the MTA's Real-time Bus Data
 
-##Project Goals:
+## Project Goals:
 
 - Archival and sharing of Real-time data
 - Reporting on the quality, consistency, and availabiity of real-time data from the MTA
