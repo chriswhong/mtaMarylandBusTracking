@@ -1,8 +1,8 @@
-#Node-GTFS
+# Node-GTFS
 
 node-GTFS loads transit data in [GTFS format](https://developers.google.com/transit/) from [GTFS Data Exchange](http://www.gtfs-data-exchange.com/), unzips it and stores it to a MongoDB database and provides some methods to query for agencies, routes, stops and times.  It also has spatial queries to find nearby stops, routes and agencies.
 
-##Setup
+## Setup
 
 `git clone git@github.com:brendannee/node-gtfs.git`
 
@@ -10,7 +10,7 @@ node-GTFS loads transit data in [GTFS format](https://developers.google.com/tran
 
 `npm install`
 
-##Configuration for loading data
+## Configuration for loading data
 
 Before you can use node-GTFS you must specify agencies to download from GTFS Data Exchange. You need the `dataexchange_id` for each agency you want to include from [GTFS Data Exchange](http://www.gtfs-data-exchange.com/) - it is in the URL of each individual transit agency's page.
 
@@ -23,18 +23,18 @@ Add the list of agency keys you'd like to support to config.js as an array calle
 The mongodb URI is also configured in `config.js`. Default database URI is:
 `mongodb://localhost:27017/gtfs`
 
-###To load data
+### To load data
 
     node ./scripts/download
 
 To keep schedules up to date, you might want to schedule this to occur once per day.
 
-#Example Application
+# Example Application
 
 An example app is provided that creates some restful API endpoints and has a simple frontend for viewing and exploring transit data.  It is in `examples/express`.
 
 
-##Running the example app locally
+## Running the example app locally
 
 Run the example site:
 
@@ -47,13 +47,13 @@ Run the example site:
 Visit `localhost:3000` in your browser
 
 
-##Endpoints
+## Endpoints
 
-###List agencies
+### List agencies
 
     /api/agencies
 
-###List agencies near a point
+### List agencies near a point
 
     /api/agenciesNearby/:lat/:lon/:radius
 
@@ -62,14 +62,14 @@ Visit `localhost:3000` in your browser
 `:radius` is optional and in miles.  Default: 25 miles
 Returns all agencies that serve the 100 nearest stops within the specified radius
 
-###List routes for an agency
+### List routes for an agency
 
     /api/routes/:agency
 
     //Example
     /api/routes/san-francisco-municipal-transportation-agency
 
-###List routes near a point
+### List routes near a point
 
     /api/routesNearby/:lat/:lon/:radius
 
@@ -78,7 +78,7 @@ Returns all agencies that serve the 100 nearest stops within the specified radiu
 `:radius` is optional and in miles.  Default: 1 mile
 Returns all routes that stop at the 100 nearest stops within the specified radius
 
-###List stops for a route
+### List stops for a route
 
     /api/stops/:agency/:route_id/:direction_id
 
@@ -86,7 +86,7 @@ Returns all routes that stop at the 100 nearest stops within the specified radiu
     /api/stops/san-francisco-municipal-transportation-agency/34/1
 `:direction_id` is optional
 
-###List stops near a point
+### List stops near a point
 
     /api/stopsNearby/:lat/:lon/:radius
 
@@ -95,7 +95,7 @@ Returns all routes that stop at the 100 nearest stops within the specified radiu
 `:radius` is optional and in miles.  Default: 1 mile
 Returns the 100 nearest stops within the specified radius
 
-###List stop times for a stop
+### List stop times for a stop
 
     /api/times/:agency/:route_id/:stop_id/:direction_id
 
@@ -104,7 +104,7 @@ Returns the 100 nearest stops within the specified radius
 `:direction_id` is optional
 
 
-##Hosting the Example App with Heroku and MongoHQ
+## Hosting the Example App with Heroku and MongoHQ
 
 Create app on Heroku
 
@@ -125,7 +125,7 @@ Execute the download script to populate the database with the agency data specif
     $ heroku run node ./scripts/download
 
 
-##Pulling in updated transit data
+## Pulling in updated transit data
 
 Re-run the download script whenever you need to refresh the database. You may want to schedule this with a cronjob.  Heroku lets you do this with [scheduler](https://devcenter.heroku.com/articles/scheduler).
 
